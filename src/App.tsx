@@ -1,23 +1,13 @@
 import React from 'react';
 import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import Navbar from './components/navbar/Navbar';
 
 function App() {
   return (
-    <ul>
-      <li>
-        <a href="#">home</a>
-      </li>
-      <li>
-        <a href="#">About</a>
-      </li>
-      <li>
-        <a href="#">Travel</a>
-      </li>
-      <li>
-        <a href="#">Books</a>
-      </li>
-    </ul>
+    <div className="app-container">
+      <Navbar />
+    </div>
   );
 }
 

@@ -2,24 +2,25 @@
 
 @import url("https://fonts.googleapis.com/css?family=Raleway:400,400i,700");
 
-
-
 ul {
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: start;
   list-style-type: none;
+  margin: 0px;
+  padding: 0px;
 }
 
 li {
-  padding: 6px 0;
+  padding: 0px;
+  margin-left: 40px;
 }
 
 a {
-  --fill-color: #198CE6;
   position: relative;
   display: block;
-  padding: 4px 0;
+  padding: 0px;
   font: 700 3rem Raleway, sans-serif;
   text-decoration: none;
   text-transform: uppercase;
@@ -31,4 +32,22 @@ a {
 }
 a:hover {
   background-size: 100%;
+}
+
+hr {
+  border: 1px solid var(--fill-color);
+
+  padding-right: 40px;
+}
+
+.hr-container {
+  width: 100%;
+}
+
+.current-page {
+  color: var(--fill-color);
+}
+
+.half-opacity {
+  opacity: 0.5;
 }
