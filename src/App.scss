@@ -9,4 +9,43 @@
     margin: 16px 0px 16px 0px;
     padding: 0px;
     width: 100%;
+
+
+    .page-container {
+        display: flex;
+        flex-direction: row;
+
+        .column-container {
+            display: flex;
+
+            min-width: 60px;
+            border-left: 2px solid var(--fill-color);
+            border-right: 2px solid var(--fill-color);
+            margin-right: 40px;
+            margin-left: 306px; // Eventually make this the width of the CONTACT string, but hidden
+            display: none;
+        }
+
+        .show-column {
+            // Make the border stretch to the top of screen
+            top: 0;
+            position: absolute;
+            height: 100vh;
+            display: initial;
+        }
+
+        .separator-container {
+           opacity: 0;
+           margin-left: 40px;
+           margin-right: 148px;
+        }
+        
+        .separator-container:hover {
+            cursor: default;
+        }
+
+        .routes-container {
+            display: flex;
+        }
+    }
 }

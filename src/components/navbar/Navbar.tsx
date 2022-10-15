@@ -3,8 +3,13 @@ import React, { useCallback, useState } from 'react';
 
 import './Navbar.scss';
 
-function Navbar() {
-  const [activePage, setPage] = useState('');
+interface navBarProps {
+  Link: any;
+  activePage: string;
+  setPage: Function;
+}
+function Navbar({ Link, activePage, setPage }: navBarProps) {
+  //const [activePage, setPage] = useState('');
   const [isHovered, isHoveringOn] = useState('');
 
   enum pages {
@@ -39,7 +44,8 @@ function Navbar() {
         />
       </div>
       <li>
-        <a
+        <Link
+          to="/"
           onClick={() => clickedNavButton(pages.home)}
           onMouseEnter={() => hoveringCallback(pages.home)}
           onMouseLeave={() => hoveringCallback('')}
@@ -48,10 +54,9 @@ function Navbar() {
               ? 'half-opacity'
               : ''
           }`}
-          href="#home"
         >
           home
-        </a>
+        </Link>
       </li>
       <div className="hr-container">
         <hr
@@ -63,7 +68,8 @@ function Navbar() {
         />
       </div>
       <li>
-        <a
+        <Link
+          to="/about"
           onClick={() => clickedNavButton(pages.about)}
           onMouseEnter={() => hoveringCallback(pages.about)}
           onMouseLeave={() => hoveringCallback('')}
@@ -72,10 +78,9 @@ function Navbar() {
               ? 'half-opacity'
               : ''
           }`}
-          href="#about"
         >
           About
-        </a>
+        </Link>
       </li>
       <div className="hr-container">
         <hr
@@ -87,7 +92,8 @@ function Navbar() {
         />
       </div>
       <li>
-        <a
+        <Link
+          to="/travel"
           onClick={() => clickedNavButton(pages.travel)}
           onMouseEnter={() => hoveringCallback(pages.travel)}
           onMouseLeave={() => hoveringCallback('')}
@@ -98,10 +104,9 @@ function Navbar() {
               ? 'half-opacity'
               : ''
           }`}
-          href="#travel"
         >
           Travel
-        </a>
+        </Link>
       </li>
       <div className="hr-container">
         <hr
@@ -113,7 +118,8 @@ function Navbar() {
         />
       </div>
       <li>
-        <a
+        <Link
+          to="/books"
           onClick={() => clickedNavButton(pages.books)}
           onMouseEnter={() => hoveringCallback(pages.books)}
           onMouseLeave={() => hoveringCallback('')}
@@ -122,10 +128,9 @@ function Navbar() {
               ? 'half-opacity'
               : ''
           }`}
-          href="#books"
         >
           Books
-        </a>
+        </Link>
       </li>
       <div className="hr-container">
         <hr
@@ -137,7 +142,8 @@ function Navbar() {
         />
       </div>
       <li>
-        <a
+        <Link
+          to="/contact"
           onClick={() => clickedNavButton(pages.contact)}
           onMouseEnter={() => hoveringCallback(pages.contact)}
           onMouseLeave={() => hoveringCallback('')}
@@ -148,10 +154,9 @@ function Navbar() {
               ? 'half-opacity'
               : ''
           }`}
-          href="#contact"
         >
           Contact
-        </a>
+        </Link>
       </li>
       <div className="hr-container">
         <hr
