@@ -12,6 +12,7 @@ function Navbar() {
     about = 'about',
     travel = 'travel',
     books = 'books',
+    contact = 'contact',
   }
 
   const clickedNavButton = (page: pages) => {
@@ -24,7 +25,7 @@ function Navbar() {
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
   const hoveringCallback = useCallback(
-    debounce((page) => isHoveringOnNav(page), 300),
+    debounce((page) => isHoveringOnNav(page), 200),
     []
   );
 
@@ -129,7 +130,33 @@ function Navbar() {
       <div className="hr-container">
         <hr
           className={`hr-settings ${
-            activePage === pages.books ? 'show-hr animate' : 'hide-hr'
+            activePage === pages.books || activePage === pages.contact
+              ? 'show-hr animate'
+              : 'hide-hr'
+          }`}
+        />
+      </div>
+      <li>
+        <a
+          onClick={() => clickedNavButton(pages.contact)}
+          onMouseEnter={() => hoveringCallback(pages.contact)}
+          onMouseLeave={() => hoveringCallback('')}
+          className={`${activePage === pages.contact ? 'current-page' : ''} ${
+            activePage === pages.contact &&
+            isHovered &&
+            isHovered !== pages.contact
+              ? 'half-opacity'
+              : ''
+          }`}
+          href="#contact"
+        >
+          Contact
+        </a>
+      </li>
+      <div className="hr-container">
+        <hr
+          className={`hr-settings ${
+            activePage === pages.contact ? 'show-hr animate' : 'hide-hr'
           }`}
         />
       </div>
