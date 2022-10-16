@@ -3,11 +3,20 @@ import logo from './logo.svg';
 import './App.scss';
 import Navbar from './components/navbar/Navbar';
 import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
+
 import Home from './pages/home/Home';
 import About from './pages/about/About';
 import Travel from './pages/travel/Travel';
 import Books from './pages/books/Books';
 import Contact from './pages/contact/Contact';
+
+export enum pages {
+  home = 'home',
+  about = 'about',
+  travel = 'travel',
+  books = 'books',
+  contact = 'contact',
+}
 
 function App() {
   const [activePage, setPage] = useState('');
@@ -25,11 +34,26 @@ function App() {
           </div>
           <div className="routes-container">
             <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/travel" element={<Travel />} />
-              <Route path="/books" element={<Books />} />
-              <Route path="/contact" element={<Contact />} />
+              <Route
+                path="/"
+                element={<Home show={activePage === pages.home} />}
+              />
+              <Route
+                path="/about"
+                element={<About show={activePage === pages.about} />}
+              />
+              <Route
+                path="/travel"
+                element={<Travel show={activePage === pages.travel} />}
+              />
+              <Route
+                path="/books"
+                element={<Books show={activePage === pages.books} />}
+              />
+              <Route
+                path="/contact"
+                element={<Contact show={activePage === pages.contact} />}
+              />
             </Routes>
           </div>
         </div>

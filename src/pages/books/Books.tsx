@@ -1,10 +1,19 @@
 import React from 'react';
+import './Books.scss';
 
-function Books() {
+interface booksProps {
+  show?: boolean;
+}
+
+function Books({ show }: booksProps) {
   return (
-    <div className="books-container">
-      <h1>Books Container</h1>
-    </div>
+    <>
+      {show && (
+        <div className="books-container">
+          <h1>Books</h1>
+        </div>
+      )}
+    </>
   );
 }
 

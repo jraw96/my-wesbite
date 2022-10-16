@@ -1,10 +1,19 @@
 import React from 'react';
+import './Travel.scss';
 
-function Travel() {
+interface travelProps {
+  show?: boolean;
+}
+
+function Travel({ show }: travelProps) {
   return (
-    <div className="travel-container">
-      <h1>Travel Container</h1>
-    </div>
+    <>
+      {show && (
+        <div className="travel-container">
+          <h1>Travel</h1>
+        </div>
+      )}
+    </>
   );
 }
 

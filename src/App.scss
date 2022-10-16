@@ -2,6 +2,11 @@
 // App wide css variables
 :root {
     --fill-color: #5b4854;
+    --left-content-alignment: 420px;
+    --second-level-top-alignment: 75px;
+    --third-level-top-alignment: 150px;
+    --fourth-level-top-alignment: 225px;
+    --fifth-level-top-alignment: 300px;
 }
 
 
@@ -14,6 +19,8 @@
     .page-container {
         display: flex;
         flex-direction: row;
+
+
 
         .column-container {
             display: flex;

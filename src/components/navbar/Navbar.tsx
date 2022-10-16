@@ -1,5 +1,6 @@
 import { debounce } from 'lodash';
 import React, { useCallback, useState } from 'react';
+import { pages } from '../../App';
 
 import './Navbar.scss';
 
@@ -12,13 +13,8 @@ function Navbar({ Link, activePage, setPage }: navBarProps) {
   //const [activePage, setPage] = useState('');
   const [isHovered, isHoveringOn] = useState('');
 
-  enum pages {
-    home = 'home',
-    about = 'about',
-    travel = 'travel',
-    books = 'books',
-    contact = 'contact',
-  }
+  //const location = useLocation();
+  //console.log('the location: ', location);
 
   const clickedNavButton = (page: pages) => {
     setPage(page);

@@ -1,10 +1,19 @@
 import React from 'react';
+import './Home.scss';
 
-function Home() {
+interface homeProps {
+  show?: boolean;
+}
+
+function Home({ show }: homeProps) {
   return (
-    <div className="home-container">
-      <h1>Home Container</h1>
-    </div>
+    <>
+      {show && (
+        <div className="home-container">
+          <h1>Home</h1>
+        </div>
+      )}
+    </>
   );
 }
 
