@@ -1,14 +1,7 @@
 import React, { useState } from 'react';
-import logo from './logo.svg';
 import './App.scss';
 import Navbar from './components/navbar/Navbar';
-import {
-  BrowserRouter as Router,
-  Route,
-  Link,
-  Routes,
-  useLocation,
-} from 'react-router-dom';
+import { Route, Link, Routes, useLocation } from 'react-router-dom';
 
 import Home from './pages/home/Home';
 import About from './pages/about/About';
@@ -47,7 +40,9 @@ function App() {
         <div className="separator-container">
           <h1>Contact</h1>
         </div>
-        <div className={`routes-container ${pathname}-positioning`}>
+        <div
+          className={`routes-container ${pathname?.substring(1)}-positioning`}
+        >
           <Routes>
             <Route path="/" element={<Home show={hasClickedHome} />} />
             <Route path="/about" element={<About />} />

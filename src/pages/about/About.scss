@@ -3,23 +3,19 @@
 .about-container {
 
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
 
+    .img-specs {
+        border-radius: 100px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; 
+        margin-right: 16px;
+    }
 
-    .row {
-        display: flex;
-        flex-direction: row;
-
-
-        .pic-section {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .bio-section {
-            display: flex;
-            flex-direction: column;
-        }
-
+    .content-container {
+        border-radius: 100px;
+        width: 351px;
+        height: 351px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; 
+        padding: 16px;
     }
 }

@@ -13,12 +13,13 @@ function Home({ show }: props) {
         <div className="home-container">
           <div className="image-container">
             <img
+              className="img-specs"
               src={vanPic}
               alt="Jake in Van, at Guadeloupe Mountains"
-              width="500"
+              width="400"
             />
           </div>
-          <div className="contentContainer">
+          <div className="content-container">
             <p>Hello, and welcome to my website!</p>q
           </div>
         </div>
