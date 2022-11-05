@@ -1,6 +1,25 @@
 
 
 .about-container {
-    position: absolute;
-    top: var(--second-level-top-alignment);
+
+    display: flex;
+    flex-direction: column;
+
+
+    .row {
+        display: flex;
+        flex-direction: row;
+
+
+        .pic-section {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .bio-section {
+            display: flex;
+            flex-direction: column;
+        }
+
+    }
 }

@@ -1,12 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Domine&display=swap');
+
+p {
+    font-family: 'Domine', serif;
+    margin: 0px;
+}
+
+
+
 
 // App wide css variables
 :root {
     --fill-color: #5b4854;
     --left-content-alignment: 420px;
-    --second-level-top-alignment: 75px;
-    --third-level-top-alignment: 150px;
-    --fourth-level-top-alignment: 225px;
-    --fifth-level-top-alignment: 300px;
+    --first-level-top-alignment: 145px;
+    --second-level-top-alignment: 210px;
+    --third-level-top-alignment: 285px;
+    --fourth-level-top-alignment: 360px;
+    --fifth-level-top-alignment: 435px;
+
+    // Spacing for banner text
+    --banner-text-right-alignment: 236px;
 }
 
 
@@ -53,6 +66,29 @@
 
         .routes-container {
             display: flex;
+            left: var(--left-content-alignment);
+            position: absolute;
+            top: 0px;
+        }
+
+        .home-positioning {
+            top: var(--first-level-top-alignment);
+        }
+
+        .about-positioning {
+            top: var(--second-level-top-alignment);
+        }
+
+        .travel-positioning {
+            top: var(--third-level-top-alignment);
+        }
+
+        .books-positioning {
+            top: var(--fourth-level-top-alignment);
+        }
+
+        .contact-positioning {
+            top: var(--fifth-level-top-alignment);
         }
     }
 }

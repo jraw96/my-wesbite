@@ -1,19 +1,13 @@
-import React from 'react';
 import './About.scss';
 
-interface aboutProps {
-  show?: boolean;
-}
-
-function About({ show }: aboutProps) {
+function About() {
   return (
-    <>
-      {show && (
-        <div className="about-container">
-          <h1>About</h1>
-        </div>
-      )}
-    </>
+    <div className="about-container">
+      <div className="row">
+        <div className="pic-section">picture here</div>
+        <div className="bio-section">blurb here</div>
+      </div>
+    </div>
   );
 }
 

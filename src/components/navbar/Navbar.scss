@@ -1,6 +1,7 @@
 
 
-@import url("https://fonts.googleapis.com/css?family=Raleway:400,400i,700");
+@import url("https://fonts.googleapis.com/css?family=Raleway:400,400i,700"); // Navbar fonts
+
 
 ul {
   width: 100%;
@@ -70,4 +71,15 @@ hr {
 
 .half-opacity {
   opacity: 0.5;
+}
+
+
+
+.nav-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.right-spacing {
+  margin-right: var(--banner-text-right-alignment);
 }
