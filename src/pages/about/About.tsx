@@ -1,6 +1,7 @@
 import './About.scss';
 
 import mePic from '../../assets/about/me.jpg';
+import { images } from '../../util/images-urls';
 
 function About() {
   return (
@@ -8,7 +9,7 @@ function About() {
       <div className="image-container">
         <img
           className="img-specs"
-          src={mePic}
+          src={images.aboutMeYosemite}
           alt="Jake at Tunnel View, Yosemite"
           width="400"
         />

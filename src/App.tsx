@@ -17,6 +17,15 @@ export enum pages {
   contact = '/contact',
 }
 
+// Used Appwide for shimmer DOM content
+export const getShimmerContent = () => {
+  return (
+    <div className="wrapper">
+      <div className="image-placeholder animate"></div>
+    </div>
+  );
+};
+
 function App() {
   const [hasClickedHome, clickedHome] = useState(false);
 
