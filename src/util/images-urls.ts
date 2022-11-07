@@ -1,3 +1,7 @@
-export enum images {
-  aboutMeYosemite = 'https://lh3.googleusercontent.com/pw/AL9nZEXbas97klCun1-AWMNVrTSNHyRlueKok-ZtTyDMiIwJqqJFJ8sKqnWr1k02EZ679blWz7QHsxC-JP72HJeKw3NqIxbonNcLXbDJAqqbAjySSeBlNuHwoAVIHIZyypnl1F7fQohCpiNLKwqBwxPQBdGTqw=w1440-h1465-no',
+export enum HomeImages {
+  vanPic = 'https://jakeraw-images.s3.us-east-2.amazonaws.com/me+in+a+van.jpeg',
+}
+
+export enum AboutImages {
+  meAtYosemite = 'https://jakeraw-images.s3.us-east-2.amazonaws.com/me+at+yosemite.jpg',
 }

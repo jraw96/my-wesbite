@@ -1,18 +1,21 @@
 import './About.scss';
-
-import mePic from '../../assets/about/me.jpg';
-import { images } from '../../util/images-urls';
+import { AboutImages } from '../../util/images-urls';
+import ImageRenderer, {
+  imageProps,
+} from '../../components/Image/ImageRenderer';
 
 function About() {
+  // Posing infront of Yosmeite pic
+  const imageProps1: imageProps = {
+    src: AboutImages.meAtYosemite,
+    alt: 'Jake at Tunnel View, Yosemite',
+    width: 400,
+  };
+
   return (
     <div className="about-container">
       <div className="image-container">
-        <img
-          className="img-specs"
-          src={images.aboutMeYosemite}
-          alt="Jake at Tunnel View, Yosemite"
-          width="400"
-        />
+        <ImageRenderer {...imageProps1} />
       </div>
       <div className="content-container">
         <p>Hello, and welcome to my website!</p>q
