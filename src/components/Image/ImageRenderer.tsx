@@ -18,47 +18,12 @@ function ImageRenderer({ src, alt, width }: imageProps) {
     const img = new Image();
     img.src = src;
     img.onload = () => {
-      setTimeout(() => setImgSrc(src), 1000);
+      setImgSrc(src);
     };
   }, [src]);
-  /*
-        <div className="loader-container" style={{ width: `${width}px` }}>
-          <div
-            className="loadingio-spinner-spin-xcd3odh6wnd"
-            style={{ position: 'relative', top: `${width / 2 - 40}px` }}
-          >
-            <div className="ldio-kuwptfm2w3">
-              <div>
-                <div></div>
-              </div>
-              <div>
-                <div></div>
-              </div>
-              <div>
-                <div></div>
-              </div>
-              <div>
-                <div></div>
-              </div>
-              <div>
-                <div></div>
-              </div>
-              <div>
-                <div></div>
-              </div>
-              <div>
-                <div></div>
-              </div>
-              <div>
-                <div></div>
-              </div>
-            </div>
-          </div>
-        </div>
-        */
 
   return (
-    <div className="loader-container">
+    <div className="loader-container" style={{ width: `${width}px` }}>
       {imgSrc ? (
         <div>
           <img
@@ -69,7 +34,37 @@ function ImageRenderer({ src, alt, width }: imageProps) {
           />
         </div>
       ) : (
-        <div style={{ width: `${width}px` }}></div>
+        <div
+          className="loadingio-spinner-spin-xcd3odh6wnd"
+          style={{ position: 'relative', top: `${width / 2 - 40}px` }}
+        >
+          <div className="ldio-kuwptfm2w3">
+            <div>
+              <div></div>
+            </div>
+            <div>
+              <div></div>
+            </div>
+            <div>
+              <div></div>
+            </div>
+            <div>
+              <div></div>
+            </div>
+            <div>
+              <div></div>
+            </div>
+            <div>
+              <div></div>
+            </div>
+            <div>
+              <div></div>
+            </div>
+            <div>
+              <div></div>
+            </div>
+          </div>
+        </div>
       )}
     </div>
   );
