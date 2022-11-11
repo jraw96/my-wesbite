@@ -1,0 +1,68 @@
+
+
+@import url("https://fonts.googleapis.com/css?family=Raleway:400,400i,700"); // Navbar fonts
+
+h2 {
+    position: relative;
+    display: block;
+    padding: 0px;
+    font: 700 42px Raleway, sans-serif;
+    text-decoration: none;
+    text-transform: uppercase;
+    -webkit-text-stroke: 2px var(--fill-color);
+    background: linear-gradient(var(--fill-color) 0 100%) left / 0 no-repeat;
+    color: transparent;
+    background-clip: text;
+    transition: 0.25s linear;
+
+    max-width: 320px;
+}
+
+h2:hover {
+    background-size: 100%;
+    cursor: pointer;
+  }
+
+.travel-container {
+    display: flex;
+    flex-direction: column;
+
+    .blurb-section {
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+        text-align: left;
+        margin-bottom: 38px;
+
+        .text {
+            font-size: 24px;
+        }
+    }
+
+    .preview-section {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        margin-bottom: 54px;
+
+
+
+        .album {
+            display: flex;
+            flex-direction: column;
+
+            margin-right: 54px;
+
+        }
+    }
+}
+
+.img-container:hover {
+    transform: scale(1.05);
+    transition: transform .1s;
+    cursor: pointer;
+  }
+
+  .img-container {
+    transition: transform .1s;
+  }

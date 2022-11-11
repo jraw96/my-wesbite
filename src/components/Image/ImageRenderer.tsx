@@ -23,7 +23,7 @@ function ImageRenderer({ src, alt, width }: imageProps) {
   }, [src]);
 
   return (
-    <div className="loader-container" style={{ width: `${width}px` }}>
+    <div className="img-container" style={{ width: `${width}px` }}>
       {imgSrc ? (
         <div>
           <img

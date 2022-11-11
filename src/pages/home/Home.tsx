@@ -1,3 +1,5 @@
+import React from 'react';
+
 import './Home.scss';
 import {
   France2019Images,

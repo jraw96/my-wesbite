@@ -1,3 +1,4 @@
+import React from 'react';
 import './About.scss';
 import { AboutImages } from '../../util/images-urls';
 import ImageRenderer, {
