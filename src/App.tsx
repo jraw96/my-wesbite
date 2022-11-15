@@ -8,23 +8,8 @@ import About from './pages/about/About';
 import Travel from './pages/travel/Travel';
 import Books from './pages/books/Books';
 import Contact from './pages/contact/Contact';
-
-export enum pages {
-  home = '/',
-  about = '/about',
-  travel = '/travel',
-  books = '/books',
-  contact = '/contact',
-}
-
-// Used Appwide for shimmer DOM content
-export const getShimmerContent = () => {
-  return (
-    <div className="wrapper">
-      <div className="image-placeholder animate"></div>
-    </div>
-  );
-};
+import TravelAlbum from './pages/travel-album/TravelAlbum';
+import { pages, travelPageRouteObject, travelRoutes } from './util/types';
 
 function App() {
   const [hasClickedHome, clickedHome] = useState(false);
@@ -53,11 +38,24 @@ function App() {
           className={`routes-container ${pathname?.substring(1)}-positioning`}
         >
           <Routes>
-            <Route path="/" element={<Home show={hasClickedHome} />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/travel" element={<Travel />} />
-            <Route path="/books" element={<Books />} />
-            <Route path="/contact" element={<Contact />} />
+            <Route path={pages.home} element={<Home show={hasClickedHome} />} />
+            <Route path={pages.about} element={<About />} />
+            <Route
+              path={pages.travel}
+              element={<Travel thumbnails={travelRoutes} />}
+            />
+            {/* Travel Album pages - eg. travel/austin  */}
+            {travelRoutes.map((obj: travelPageRouteObject) => {
+              const pathname = `${pages.travel}${obj.path}`;
+              return (
+                <Route
+                  path={pathname}
+                  element={<TravelAlbum title={obj.albumPreview.title} />}
+                />
+              );
+            })}
+            <Route path={pages.books} element={<Books />} />
+            <Route path={pages.contact} element={<Contact />} />
           </Routes>
         </div>
       </div>

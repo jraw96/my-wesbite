@@ -1,6 +1,6 @@
 import { debounce } from 'lodash';
 import React, { useCallback, useState } from 'react';
-import { pages } from '../../App';
+import { pages } from '../../util/types';
 
 import './Navbar.scss';
 

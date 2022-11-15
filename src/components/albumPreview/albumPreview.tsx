@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
-import ImageRenderer, { imageProps } from '../Image/ImageRenderer';
+import { TravelPageTitles } from '../../util/types';
+import ImageRender, { imageProps } from '../imageRender/ImageRender';
 import './albumPreview.scss';
 
-interface props {
+export interface albumProps {
   imageProps: imageProps;
-  title: string;
+  title: TravelPageTitles;
 }
 
-function AlbumPreview({ title, imageProps }: props) {
+function AlbumPreview({ title, imageProps }: albumProps) {
   const [hovered, isHovering] = useState(false);
 
   return (
@@ -20,7 +21,7 @@ function AlbumPreview({ title, imageProps }: props) {
         isHovering(false);
       }}
     >
-      <ImageRenderer {...imageProps} />
+      <ImageRender {...imageProps} />
       <h2 className={`${hovered ? 'hover-animation' : ''}`}>{title}</h2>
     </div>
   );

@@ -6,9 +6,10 @@ import {
   HomeImages,
   Vietnam2019Images,
 } from '../../util/images-urls';
-import ImageRenderer, {
+import ImageRender, {
   imageProps,
-} from '../../components/Image/ImageRenderer';
+} from '../../components/imageRender/ImageRender';
+import { pages, TravelPageRoutes } from '../../util/types';
 interface props {
   show: boolean;
 }
@@ -19,6 +20,8 @@ function Home({ show }: props) {
     src: HomeImages.vanPic,
     alt: 'Me leaning out of a van',
     width: 400,
+    title: 'Driving to the Guadeloupe Mountains TX, USA - 2021',
+    link: `${window.location.origin}${pages.travel}${TravelPageRoutes.westTexas}`,
   };
 
   // Paris pic
@@ -26,6 +29,8 @@ function Home({ show }: props) {
     src: France2019Images.paris2,
     alt: 'Odette French Bakery',
     width: 400,
+    title: 'Oddette Bakery, Paris, FR - 2019',
+    link: `${window.location.origin}${pages.travel}${TravelPageRoutes.france}`,
   };
 
   // Vietnam buncha pic
@@ -33,6 +38,8 @@ function Home({ show }: props) {
     src: Vietnam2019Images.bunCha,
     alt: 'Bún chả',
     width: 400,
+    title: 'Bún Chả for dinner, Hanoi, VNM - 2019',
+    link: `${window.location.origin}${pages.travel}${TravelPageRoutes.vietnam}`,
   };
 
   return (
@@ -41,7 +48,7 @@ function Home({ show }: props) {
         <div className="home-container">
           <div className="col">
             <div className="image-container">
-              <ImageRenderer {...imageProps1} />
+              <ImageRender {...imageProps1} />
             </div>
           </div>
           <div className="col">
@@ -58,12 +65,12 @@ function Home({ show }: props) {
               <p className="text">-Jake </p>
             </div>
             <div className="image-container">
-              <ImageRenderer {...imageProps3} />
+              <ImageRender {...imageProps3} />
             </div>
           </div>
           <div className="col">
             <div className="image-container">
-              <ImageRenderer {...imageProps2} />
+              <ImageRender {...imageProps2} />
             </div>
           </div>
         </div>

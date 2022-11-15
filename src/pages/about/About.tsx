@@ -1,9 +1,10 @@
 import React from 'react';
 import './About.scss';
 import { AboutImages } from '../../util/images-urls';
-import ImageRenderer, {
+import ImageRender, {
   imageProps,
-} from '../../components/Image/ImageRenderer';
+} from '../../components/imageRender/ImageRender';
+import { pages, TravelPageRoutes } from '../../util/types';
 
 function About() {
   // Posing infront of Yosmeite pic
@@ -11,13 +12,15 @@ function About() {
     src: AboutImages.meAtYosemite,
     alt: 'Jake at Tunnel View, Yosemite',
     width: 400,
+    title: 'At Tunnel View in Yosemite Park, CA, USA - 2022',
+    link: `${window.location.origin}${pages.travel}${TravelPageRoutes.roadTrip2022}`,
   };
 
   return (
     <div className="about-container">
       <div className="col">
         <div className="image-container">
-          <ImageRenderer {...imageProps1} />
+          <ImageRender {...imageProps1} />
         </div>
       </div>
       <div className="col">

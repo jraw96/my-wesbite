@@ -1,17 +1,22 @@
 import React, { useEffect, useState } from 'react';
-import './ImageRenderer.scss';
+import './ImageRender.scss';
 
 export interface imageProps {
   src: string;
   alt: string;
   width: number;
+  title?: string;
+  link?: string;
+  onHover?: boolean;
 }
 
 /**
  * App wide image component
  */
-function ImageRenderer({ src, alt, width }: imageProps) {
+function ImageRender({ src, alt, width, title, onHover, link }: imageProps) {
   const [imgSrc, setImgSrc] = useState<any>(undefined);
+  const [hovering, setHovering] = useState(false);
+  const [shown, show] = useState(false);
 
   // Apply the loading css until the image fully
   useEffect(() => {
@@ -25,13 +30,29 @@ function ImageRenderer({ src, alt, width }: imageProps) {
   return (
     <div className="img-container" style={{ width: `${width}px` }}>
       {imgSrc ? (
-        <div>
+        <div
+          onMouseEnter={() => {
+            setHovering(true);
+            show(true);
+          }}
+          onMouseLeave={() => setHovering(false)}
+          onClick={() => {
+            if (link) {
+              window.location.href = link;
+            }
+          }}
+        >
           <img
-            className="img-specs loaded"
+            className={`img-specs ${hovering ? 'image-hover' : ''}`}
             src={imgSrc}
             alt={alt}
             width={width}
           />
+          {title && shown && (
+            <p className={`title-text ${hovering ? 'block-text-hover' : ''}`}>
+              {title}
+            </p>
+          )}
         </div>
       ) : (
         <div
@@ -70,4 +91,4 @@ function ImageRenderer({ src, alt, width }: imageProps) {
   );
 }
 
-export default ImageRenderer;
+export default ImageRender;
