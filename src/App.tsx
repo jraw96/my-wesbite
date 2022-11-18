@@ -8,8 +8,14 @@ import About from './pages/about/About';
 import Travel from './pages/travel/Travel';
 import Books from './pages/books/Books';
 import Contact from './pages/contact/Contact';
-import TravelAlbum from './pages/travel-album/TravelAlbum';
 import { pages, travelPageRouteObject, travelRoutes } from './util/types';
+import France from './pages/travel/pages/france/France';
+import RoadTrip2022 from './pages/travel/pages/roadtrip2022/roadTrip2022';
+import SanFrancisco from './pages/travel/pages/sanFrancisco/SanFrancisco';
+import Austin from './pages/travel/pages/austin/Austin';
+import Miami from './pages/travel/pages/miami/Miami';
+import Toronto from './pages/travel/pages/toronto/Toronto';
+import Vietnam from './pages/travel/pages/vietnam/Vietnam';
 
 function App() {
   const [hasClickedHome, clickedHome] = useState(false);
@@ -18,6 +24,28 @@ function App() {
   const pathname = useLocation()?.pathname;
   const showColumnThing =
     hasClickedHome || (pathname && pathname !== pages.home);
+
+  // Based on the current route, load the respective album component
+  const getAlbum = (obj: travelPageRouteObject) => {
+    switch (obj.path) {
+      case '/france':
+        return <France title={obj.albumPreview.title} />;
+      case '/austin':
+        return <Austin title={obj.albumPreview.title} />;
+      case '/miami':
+        return <Miami title={obj.albumPreview.title} />;
+      case '/vietnam':
+        return <Vietnam title={obj.albumPreview.title} />;
+      case '/toronto':
+        return <Toronto title={obj.albumPreview.title} />;
+      case '/roadtrip-2022':
+        return <RoadTrip2022 title={obj.albumPreview.title} />;
+      case '/west-texas':
+        return <France title={obj.albumPreview.title} />;
+      case '/san-francisco':
+        return <SanFrancisco title={obj.albumPreview.title} />;
+    }
+  };
 
   return (
     <div className="app-container">
@@ -47,12 +75,7 @@ function App() {
             {/* Travel Album pages - eg. travel/austin  */}
             {travelRoutes.map((obj: travelPageRouteObject) => {
               const pathname = `${pages.travel}${obj.path}`;
-              return (
-                <Route
-                  path={pathname}
-                  element={<TravelAlbum title={obj.albumPreview.title} />}
-                />
-              );
+              return <Route path={pathname} element={getAlbum(obj)} />;
             })}
             <Route path={pages.books} element={<Books />} />
             <Route path={pages.contact} element={<Contact />} />

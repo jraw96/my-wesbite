@@ -5,7 +5,6 @@ import ImageRender, {
   imageProps,
 } from '../../components/imageRender/ImageRender';
 import { pages, TravelPageRoutes } from '../../util/types';
-import MyGallery from '../../components/Gallery/gallery';
 
 function About() {
   // Posing infront of Yosmeite pic
@@ -69,8 +68,6 @@ function About() {
           </p>
         </div>
       </div>
-
-      <MyGallery />
     </div>
   );
 }

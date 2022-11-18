@@ -28,6 +28,17 @@ export enum TravelPageRoutes {
   miami = '/miami',
   vietnam = '/vietnam',
   toronto = '/toronto',
+  roadTrip2022 = '/roadtrip-2022',
+  westTexas = '/west-texas',
+  sanFrancisco = '/san-francisco',
+}
+
+export enum TravelRouteToAlbum {
+  austin = '/austin',
+  france = '/france',
+  miami = '/miami',
+  vietnam = '/vietnam',
+  toronto = '/toronto',
   roadTrip2022 = '/az-ut-nv-ca-roadtrip',
   westTexas = '/west-texas',
   sanFrancisco = '/san-francisco',
@@ -36,6 +47,20 @@ export enum TravelPageRoutes {
 export interface travelPageRouteObject {
   path: TravelPageRoutes;
   albumPreview: albumProps;
+}
+
+// Photoswipe library types:
+export interface photoItem {
+  original: string;
+  thumbnail: string;
+  width: number;
+  height: number;
+  alt: string;
+}
+
+export interface francePlaces {
+  paris: photoItem[];
+  annecy: photoItem[];
 }
 
 // Const values:

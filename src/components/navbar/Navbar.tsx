@@ -1,5 +1,6 @@
 import { debounce } from 'lodash';
 import React, { useCallback, useState } from 'react';
+import { useLocation } from 'react-router-dom';
 import { pages } from '../../util/types';
 
 import './Navbar.scss';
@@ -23,6 +24,16 @@ function Navbar({ Link, clickHome, pathname, hasClickedHome }: navBarProps) {
     debounce((page) => isHoveringOnNav(page), 200),
     []
   );
+
+  let travelTitle = pages.travel.substring(1);
+  if (pathname.includes(`${travelTitle}/`)) {
+    const album = pathname.slice(pathname.lastIndexOf('/'));
+    travelTitle = album.substring(1);
+  } else {
+    travelTitle = 'albums';
+  }
+
+  // Check if a subroute is active for travel
 
   return (
     <ul>
@@ -85,7 +96,7 @@ function Navbar({ Link, clickHome, pathname, hasClickedHome }: navBarProps) {
       <div className="hr-container">
         <hr
           className={`hr-settings ${
-            pathname === pages.about || pathname === pages.travel
+            pathname === pages.about || pathname.includes(pages.travel)
               ? 'show-hr animate'
               : 'hide-hr'
           }`}
@@ -97,7 +108,7 @@ function Navbar({ Link, clickHome, pathname, hasClickedHome }: navBarProps) {
           onMouseEnter={() => hoveringCallback(pages.travel)}
           onMouseLeave={() => hoveringCallback('')}
           className={`right-spacing ${
-            pathname === pages.travel ? 'current-page' : ''
+            pathname.includes(pages.travel) ? 'current-page' : ''
           } ${
             pathname === pages.travel && isHovered && isHovered !== pages.travel
               ? 'half-opacity'
@@ -106,12 +117,14 @@ function Navbar({ Link, clickHome, pathname, hasClickedHome }: navBarProps) {
         >
           Travel
         </Link>
-        {pathname === pages.travel && <div className="banner-text">Travel</div>}
+        {pathname.includes(pages.travel) && (
+          <div className="banner-text">{travelTitle}</div>
+        )}
       </li>
       <div className="hr-container">
         <hr
           className={`hr-settings ${
-            pathname === pages.travel || pathname === pages.books
+            pathname.includes(pages.travel) || pathname === pages.books
               ? 'show-hr animate'
               : 'hide-hr'
           }`}
