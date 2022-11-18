@@ -4,11 +4,19 @@ import 'photoswipe/dist/photoswipe.css';
 import { Gallery, Item } from 'react-photoswipe-gallery';
 import { photoItem } from '../../util/types';
 
-interface props {
-  photos: photoItem[];
+export interface galleryStyles {
+  display: string;
+  gridTemplateColumns: string;
+  gridTemplateRows: string;
+  gridGap: number;
 }
 
-function MyGallery({ photos }: props) {
+interface props {
+  photos: photoItem[];
+  styles: galleryStyles;
+}
+
+function MyGallery({ photos, styles }: props) {
   const smallItemStyles: React.CSSProperties = {
     cursor: 'pointer',
     objectFit: 'cover',
@@ -21,10 +29,10 @@ function MyGallery({ photos }: props) {
       <Gallery>
         <div
           style={{
-            display: 'grid',
-            gridTemplateColumns: '240px 271px 171px',
-            gridTemplateRows: '114px 114px',
-            gridGap: 12,
+            display: styles.display,
+            gridTemplateColumns: styles.gridTemplateColumns,
+            gridTemplateRows: styles.gridTemplateRows,
+            gridGap: styles.gridGap,
           }}
         >
           {photos.map((photo: photoItem) => {
