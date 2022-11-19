@@ -4,43 +4,32 @@ import 'photoswipe/dist/photoswipe.css';
 import { Gallery, Item } from 'react-photoswipe-gallery';
 import { photoItem } from '../../util/types';
 
-export interface galleryStyles {
+// Source: https://github.com/dromru/react-photoswipe-gallery
+// Demo of photoswipe: https://dromru.github.io/react-photoswipe-gallery/?path=/story/demo-basic--basic
+
+export interface gridCSS {
   display: string;
   gridTemplateColumns: string;
-  gridTemplateRows: string;
+  gridTemplateRows: any;
   gridGap: number;
 }
 
 interface props {
   photos: photoItem[];
-  styles: galleryStyles;
+  grid: gridCSS;
 }
 
-function MyGallery({ photos, styles }: props) {
-  const smallItemStyles: React.CSSProperties = {
-    cursor: 'pointer',
-    objectFit: 'cover',
-    width: '100%',
-    maxHeight: '100%',
-  };
-
+function MyGallery({ photos, grid }: props) {
   return (
     <>
       <Gallery>
-        <div
-          style={{
-            display: styles.display,
-            gridTemplateColumns: styles.gridTemplateColumns,
-            gridTemplateRows: styles.gridTemplateRows,
-            gridGap: styles.gridGap,
-          }}
-        >
+        <div style={{ ...grid }}>
           {photos.map((photo: photoItem) => {
             return (
               <Item {...photo}>
                 {({ ref, open }) => (
                   <img
-                    style={{ cursor: 'pointer' }}
+                    style={{ cursor: 'pointer', width: photo.thumbnailWidth }}
                     src={photo.original}
                     ref={ref as React.MutableRefObject<HTMLImageElement>}
                     onClick={open}
@@ -59,6 +48,15 @@ export default MyGallery;
 
 // Bakcup:
 /*
+  const smallItemStyles: React.CSSProperties = {
+    cursor: 'pointer',
+    objectFit: 'cover',
+    width: '100%',
+    maxHeight: '100%',
+  };
+
+
+
  <Gallery>
         <div
           style={{
