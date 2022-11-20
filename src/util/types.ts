@@ -52,8 +52,8 @@ export interface travelPageRouteObject {
 // Photoswipe library props.
 // These properties are used when the image is clicked on and expands to fill the screen
 export interface photoItem {
-  original: string; // Link to image to used for exapnded image selection
-  thumbnail: string; // Link for the thumbnail image
+  original?: string; // Link to image to used for exapnded image selection
+  thumbnail?: string; // Link for the thumbnail image
   thumbnailWidth?: number | string;
   thumbnailHeight?: number | string;
   width: number; // Add the correct aspect ratio width of the image here
@@ -61,11 +61,6 @@ export interface photoItem {
   alt: string; // alt text
   src: string;
   id: string;
-}
-
-export interface francePlaces {
-  paris: photoItem[];
-  annecy: photoItem[];
 }
 
 // Const values:

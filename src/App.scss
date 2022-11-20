@@ -10,7 +10,7 @@ p {
 // App wide css variables
 :root {
     --fill-color: #5b4854;
-    --left-content-alignment: 420px;
+    --left-content-alignment: 429px;
     --first-level-top-alignment: 145px;
     --second-level-top-alignment: 210px;
     --third-level-top-alignment: 285px;
@@ -47,7 +47,7 @@ p {
             // Make the border stretch to the top of screen
             top: 0;
             position: absolute;
-            height: 100vh;
+            height: 100%;
             display: initial;
         }
 
@@ -62,7 +62,7 @@ p {
         }
 
         .routes-container {
-            width: calc(100vw - 480px);
+            width: calc(100vw - 490px);
             display: flex;
             left: var(--left-content-alignment);
             position: absolute;

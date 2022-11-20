@@ -1,25 +1,41 @@
 import React from 'react';
 import MyGallery, { gridCSS } from '../../../../components/Gallery/gallery';
 import { TravelPageTitles } from '../../../../util/types';
-import { parisList } from './albumLists';
+import { franceList } from './albumLists';
 import './France.scss';
 
-interface travelAlbumProps {
-  title: TravelPageTitles;
-}
-
-function France({ title }: travelAlbumProps) {
-  const section1: gridCSS = {
-    display: 'grid',
-    gridTemplateColumns: '200px 200px 200px 399px 355px',
-    gridTemplateRows: '100%',
-    gridGap: 12,
-  };
-
+function France() {
   return (
     <div className="travel-album-container">
-      <div>{title} album goes here </div>
-      <MyGallery photos={parisList} grid={section1} />
+      <h2 className="title">Paris </h2>
+      <div className="gallery-wrapper">
+        <MyGallery photos={franceList.paris} />
+      </div>
+
+      <h2 className="title">Annecy </h2>
+      <div className="gallery-wrapper">
+        <MyGallery photos={franceList.annecy} />
+      </div>
+
+      <h2 className="title">Nice </h2>
+      <div className="gallery-wrapper">
+        <MyGallery photos={franceList.nice} />
+      </div>
+
+      <h2 className="title">Monaco </h2>
+      <div className="gallery-wrapper">
+        <MyGallery photos={franceList.monaco} />
+      </div>
+
+      <h2 className="title">Saint Tropez </h2>
+      <div className="gallery-wrapper">
+        <MyGallery photos={franceList.saintTropez} />
+      </div>
+
+      <h2 className="title">Bordeaux </h2>
+      <div className="gallery-wrapper">
+        <MyGallery photos={franceList.bordeaux} />
+      </div>
     </div>
   );
 }

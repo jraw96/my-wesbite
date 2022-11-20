@@ -6,6 +6,10 @@ import { photoItem } from '../../util/types';
 // Example react-ohoto-gallery with lightbox"
 // https://neptunian.github.io/react-photo-gallery/examples/lightbox.html
 
+// Codepen example:
+// https://codesandbox.io/s/react-photo-gallery-with-image-viewer-forked-c21wfp?file=/index.js:1058-1107
+
+// Not used:
 export interface gridCSS {
   display: string;
   gridTemplateColumns: string;

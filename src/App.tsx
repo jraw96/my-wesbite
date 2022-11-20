@@ -16,6 +16,7 @@ import Austin from './pages/travel/pages/austin/Austin';
 import Miami from './pages/travel/pages/miami/Miami';
 import Toronto from './pages/travel/pages/toronto/Toronto';
 import Vietnam from './pages/travel/pages/vietnam/Vietnam';
+import WestTexas from './pages/travel/pages/westTexas/WestTexas';
 
 function App() {
   const [hasClickedHome, clickedHome] = useState(false);
@@ -29,7 +30,7 @@ function App() {
   const getAlbum = (obj: travelPageRouteObject) => {
     switch (obj.path) {
       case '/france':
-        return <France title={obj.albumPreview.title} />;
+        return <France />;
       case '/austin':
         return <Austin title={obj.albumPreview.title} />;
       case '/miami':
@@ -41,7 +42,7 @@ function App() {
       case '/roadtrip-2022':
         return <RoadTrip2022 title={obj.albumPreview.title} />;
       case '/west-texas':
-        return <France title={obj.albumPreview.title} />;
+        return <WestTexas title={obj.albumPreview.title} />;
       case '/san-francisco':
         return <SanFrancisco title={obj.albumPreview.title} />;
     }

@@ -1,12 +1,18 @@
 import { France2019Images } from '../../../../util/images-urls';
-import { francePlaces, photoItem } from '../../../../util/types';
+import { photoItem } from '../../../../util/types';
 
-export let parisList: photoItem[] = [
+export interface francePlaces {
+  paris: photoItem[];
+  annecy: photoItem[];
+  nice: photoItem[];
+  monaco: photoItem[];
+  saintTropez: photoItem[];
+  bordeaux: photoItem[];
+}
+
+export const parisList: photoItem[] = [
   {
     src: France2019Images.paris2,
-    original: France2019Images.paris2,
-    thumbnail: France2019Images.paris2,
-    thumbnailWidth: '100%',
     width: 727,
     height: 969,
     alt: 'Paris 2',
@@ -14,9 +20,6 @@ export let parisList: photoItem[] = [
   },
   {
     src: France2019Images.paris1,
-    original: France2019Images.paris1,
-    thumbnail: France2019Images.paris1,
-    thumbnailWidth: '100%',
     width: 727,
     height: 969,
     alt: 'Paris 1',
@@ -24,9 +27,6 @@ export let parisList: photoItem[] = [
   },
   {
     src: France2019Images.paris6,
-    original: France2019Images.paris6,
-    thumbnail: France2019Images.paris6,
-    thumbnailWidth: '100%',
     width: 727,
     height: 969,
     alt: 'Paris 6',
@@ -154,7 +154,18 @@ export let parisList: photoItem[] = [
   },
 ];
 
+const annecyList: photoItem[] = [];
+const niceList: photoItem[] = [];
+const monacoList: photoItem[] = [];
+const saintTropezList: photoItem[] = [];
+const bordeauxList: photoItem[] = [];
+
+// Exportable object
 export const franceList: francePlaces = {
   paris: parisList,
-  annecy: [],
+  annecy: annecyList,
+  nice: niceList,
+  monaco: monacoList,
+  saintTropez: saintTropezList,
+  bordeaux: bordeauxList,
 };

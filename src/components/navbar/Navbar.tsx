@@ -107,7 +107,7 @@ function Navbar({ Link, clickHome, pathname, hasClickedHome }: navBarProps) {
           to="/travel"
           onMouseEnter={() => hoveringCallback(pages.travel)}
           onMouseLeave={() => hoveringCallback('')}
-          className={`right-spacing ${
+          className={`travel-spacing ${
             pathname.includes(pages.travel) ? 'current-page' : ''
           } ${
             pathname === pages.travel && isHovered && isHovered !== pages.travel
