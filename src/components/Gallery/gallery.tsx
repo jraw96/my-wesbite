@@ -2,6 +2,7 @@ import { useState, useCallback } from 'react';
 import Carousel, { Modal, ModalGateway } from 'react-images';
 import Gallery from 'react-photo-gallery';
 import { photoItem } from '../../util/types';
+import './gallery.scss';
 
 // Example react-ohoto-gallery with lightbox"
 // https://neptunian.github.io/react-photo-gallery/examples/lightbox.html
@@ -43,7 +44,7 @@ function MyGallery({ photos }: props) {
   };
 
   return (
-    <div>
+    <div className="gallery-container">
       <Gallery photos={photos} margin={2} onClick={openLightbox} />
       <ModalGateway>
         {viewerIsOpen ? (
