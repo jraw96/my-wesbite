@@ -19,7 +19,7 @@ function Home({ show }: props) {
   const imageProps1: imageProps = {
     src: HomeImages.vanPic,
     alt: 'Me leaning out of a van',
-    width: 400,
+    width: 416,
     title: 'Driving to the Guadeloupe Mountains TX, USA - 2021',
     link: `${window.location.origin}${pages.travel}${TravelPageRoutes.westTexas}`,
   };
@@ -66,11 +66,6 @@ function Home({ show }: props) {
             </div>
             <div className="image-container">
               <ImageRender {...imageProps3} />
-            </div>
-          </div>
-          <div className="col">
-            <div className="image-container">
-              <ImageRender {...imageProps2} />
             </div>
           </div>
         </div>
