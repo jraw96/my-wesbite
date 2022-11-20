@@ -22,4 +22,12 @@
         margin-bottom: 54px;
     }
 }
-
+// Hover animations for travel images
+#thumbnail:hover {
+   // transform: scale(1.01);
+   // transition: transform .1s;
+    //border-radius: 3px;
+}
+#thumbnail {
+    border-radius: 3px;
+}

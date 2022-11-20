@@ -56,9 +56,11 @@ export interface photoItem {
   thumbnail: string; // Link for the thumbnail image
   thumbnailWidth?: number | string;
   thumbnailHeight?: number | string;
-  width: number | string; // Add the correct aspect ratio width of the image here
-  height: number | string; // Add the correct aspect ratio height of the image here
+  width: number; // Add the correct aspect ratio width of the image here
+  height: number; // Add the correct aspect ratio height of the image here
   alt: string; // alt text
+  src: string;
+  id: string;
 }
 
 export interface francePlaces {

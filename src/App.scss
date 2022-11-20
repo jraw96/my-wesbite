@@ -62,6 +62,7 @@ p {
         }
 
         .routes-container {
+            width: calc(100vw - 480px);
             display: flex;
             left: var(--left-content-alignment);
             position: absolute;
@@ -81,6 +82,7 @@ p {
         }
 
         .travel-album-container {
+            width: inherit;
             position: absolute;
             top: var(--third-level-top-alignment);
         }

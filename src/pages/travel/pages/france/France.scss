@@ -1,0 +1,9 @@
+// Hover animations for travel images
+#thumbnal:hover {
+    transform: scale(1.015);
+    transition: transform .1s;
+    border-radius: 3px;
+}
+#thumbnal {
+    border-radius: 3px;
+}
