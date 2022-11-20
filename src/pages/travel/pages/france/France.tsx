@@ -1,6 +1,4 @@
-import React from 'react';
-import MyGallery, { gridCSS } from '../../../../components/Gallery/gallery';
-import { TravelPageTitles } from '../../../../util/types';
+import MyGallery from '../../../../components/Gallery/gallery';
 import { franceList } from './albumLists';
 import './France.scss';
 

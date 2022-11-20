@@ -27,6 +27,7 @@ export enum France2019Images {
   annecy7 = 'https://jakeraw-images.s3.us-east-2.amazonaws.com/travel/france-2019/annecy7.jpg',
   annecy8 = 'https://jakeraw-images.s3.us-east-2.amazonaws.com/travel/france-2019/annecy8.jpg',
   annecy9 = 'https://jakeraw-images.s3.us-east-2.amazonaws.com/travel/france-2019/annecy9.jpg',
+  annecy10 = 'https://jakeraw-images.s3.us-east-2.amazonaws.com/travel/france-2019/annecy10.jpg',
   paris1 = 'https://jakeraw-images.s3.us-east-2.amazonaws.com/travel/france-2019/paris1.jpg',
   paris2 = 'https://jakeraw-images.s3.us-east-2.amazonaws.com/travel/france-2019/paris2.jpg',
   paris3 = 'https://jakeraw-images.s3.us-east-2.amazonaws.com/travel/france-2019/paris3.jpg',
