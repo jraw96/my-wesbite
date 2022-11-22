@@ -34,6 +34,11 @@ function France() {
       <div className="gallery-wrapper">
         <MyGallery photos={franceList.bordeaux} />
       </div>
+
+      <h2 className="title">Saint-Émilion </h2>
+      <div className="gallery-wrapper last-album">
+        <MyGallery photos={franceList.saintEmilion} />
+      </div>
     </div>
   );
 }

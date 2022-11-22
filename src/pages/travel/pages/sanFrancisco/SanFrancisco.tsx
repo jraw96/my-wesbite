@@ -1,24 +1,14 @@
-import React from 'react';
-import MyGallery, { gridCSS } from '../../../../components/Gallery/gallery';
-import { TravelPageTitles } from '../../../../util/types';
-import { parisList } from '../france/albumLists';
+import MyGallery from '../../../../components/Gallery/gallery';
+import { sanFranList } from './albumLists';
+import './SanFrancisco.scss';
 
-interface travelAlbumProps {
-  title: TravelPageTitles;
-}
-
-function SanFrancisco({ title }: travelAlbumProps) {
-  const section1: gridCSS = {
-    display: 'grid',
-    gridTemplateColumns: '240px 271px 171px',
-    gridTemplateRows: '114px 114px',
-    gridGap: 12,
-  };
-
+function SanFrancisco() {
   return (
     <div className="travel-album-container">
-      <div>{title} album goes here </div>
-      <MyGallery photos={parisList} grid={section1} />
+      <h2 className="title">San Francisco </h2>
+      <div className="gallery-wrapper">
+        <MyGallery photos={sanFranList.sanFran} />
+      </div>
     </div>
   );
 }

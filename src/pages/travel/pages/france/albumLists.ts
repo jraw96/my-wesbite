@@ -8,9 +8,19 @@ export interface francePlaces {
   monaco: photoItem[];
   saintTropez: photoItem[];
   bordeaux: photoItem[];
+  saintEmilion: photoItem[];
 }
 
-export const parisList: photoItem[] = [
+// Not included:
+// 18, 12
+const parisList: photoItem[] = [
+  {
+    src: France2019Images.paris19,
+    width: 1133,
+    height: 1700,
+    alt: 'Paris 19',
+    id: 'thumbnail',
+  },
   {
     src: France2019Images.paris2,
     width: 727,
@@ -37,6 +47,13 @@ export const parisList: photoItem[] = [
     width: 1453,
     height: 969,
     alt: 'Paris 4',
+    id: 'thumbnail',
+  },
+  {
+    src: France2019Images.paris48,
+    width: 2419,
+    height: 1814,
+    alt: 'Paris 48',
     id: 'thumbnail',
   },
   {
@@ -82,10 +99,10 @@ export const parisList: photoItem[] = [
     id: 'thumbnail',
   },
   {
-    src: France2019Images.paris12,
-    width: 1292,
-    height: 969,
-    alt: 'Paris 12',
+    src: France2019Images.paris49,
+    width: 2419,
+    height: 1814,
+    alt: 'Paris 49',
     id: 'thumbnail',
   },
   {
@@ -114,6 +131,153 @@ export const parisList: photoItem[] = [
     width: 1731,
     height: 1298,
     alt: 'Paris 15',
+    id: 'thumbnail',
+  }, // New photos below here:
+  {
+    src: France2019Images.paris16,
+    width: 2916,
+    height: 997,
+    alt: 'Paris 16',
+    id: 'thumbnail',
+  },
+  {
+    src: France2019Images.paris17,
+    width: 1360,
+    height: 1814,
+    alt: 'Paris 17',
+    id: 'thumbnail',
+  },
+  {
+    src: France2019Images.paris22,
+    width: 2419,
+    height: 1814,
+    alt: 'Paris 22',
+    id: 'thumbnail',
+  },
+  {
+    src: France2019Images.paris23,
+    width: 1209,
+    height: 1814,
+    alt: 'Paris 23',
+    id: 'thumbnail',
+  },
+  {
+    src: France2019Images.paris24,
+    width: 2721,
+    height: 1814,
+    alt: 'Paris 24',
+    id: 'thumbnail',
+  },
+  {
+    src: France2019Images.paris25,
+    width: 2721,
+    height: 1814,
+    alt: 'Paris 25',
+    id: 'thumbnail',
+  },
+  {
+    src: France2019Images.paris26,
+    width: 2493,
+    height: 1813,
+    alt: 'Paris 26',
+    id: 'thumbnail',
+  },
+  {
+    src: France2019Images.paris28,
+    width: 1209,
+    height: 1814,
+    alt: 'Paris 28',
+    id: 'thumbnail',
+  },
+  {
+    src: France2019Images.paris29,
+    width: 2419,
+    height: 1814,
+    alt: 'Paris 29',
+    id: 'thumbnail',
+  },
+  {
+    src: France2019Images.paris31,
+    width: 1360,
+    height: 1814,
+    alt: 'Paris 31',
+    id: 'thumbnail',
+  },
+  {
+    src: France2019Images.paris34,
+    width: 1275,
+    height: 1700,
+    alt: 'Paris 34',
+    id: 'thumbnail',
+  },
+  {
+    src: France2019Images.paris36,
+    width: 2268,
+    height: 1701,
+    alt: 'Paris 36',
+    id: 'thumbnail',
+  },
+  {
+    src: France2019Images.paris37,
+    width: 2419,
+    height: 1814,
+    alt: 'Paris 37',
+    id: 'thumbnail',
+  },
+  {
+    src: France2019Images.paris41,
+    width: 2268,
+    height: 1701,
+    alt: 'Paris 37',
+    id: 'thumbnail',
+  },
+  {
+    src: France2019Images.paris43,
+    width: 1320,
+    height: 1706,
+    alt: 'Paris 43',
+    id: 'thumbnail',
+  },
+  {
+    src: France2019Images.paris44,
+    width: 1275,
+    height: 1700,
+    alt: 'Paris 44',
+    id: 'thumbnail',
+  },
+  {
+    src: France2019Images.paris45,
+    width: 1360,
+    height: 1814,
+    alt: 'Paris 45',
+    id: 'thumbnail',
+  },
+  {
+    src: France2019Images.paris46,
+    width: 2916,
+    height: 667,
+    alt: 'Paris 46',
+    id: 'thumbnail',
+  },
+  {
+    src: France2019Images.paris47,
+    width: 2721,
+    height: 1814,
+    alt: 'Paris 45',
+    id: 'thumbnail',
+  },
+  {
+    src: France2019Images.paris50,
+    width: 2268,
+    height: 1701,
+    alt: 'Paris 50',
+    id: 'thumbnail',
+  },
+  {
+    src: France2019Images.paris51,
+    width: 1275,
+    height: 1700,
+    alt: 'Paris 51',
     id: 'thumbnail',
   },
 ];
@@ -183,6 +347,55 @@ const annecyList: photoItem[] = [
     id: 'thumbnail',
   },
   {
+    src: France2019Images.annecy21,
+    width: 3024,
+    height: 4032,
+    alt: 'Annecy 21',
+    id: 'thumbnail',
+  },
+  {
+    src: France2019Images.annecy22,
+    width: 3024,
+    height: 4032,
+    alt: 'Annecy 20',
+    id: 'thumbnail',
+  },
+  {
+    src: France2019Images.annecy11,
+    width: 2550,
+    height: 1700,
+    alt: 'Annecy 11',
+    id: 'thumbnail',
+  },
+  {
+    src: France2019Images.annecy12,
+    width: 2721,
+    height: 1814,
+    alt: 'Annecy 12',
+    id: 'thumbnail',
+  },
+  {
+    src: France2019Images.annecy19,
+    width: 2419,
+    height: 1814,
+    alt: 'Annecy 15',
+    id: 'thumbnail',
+  },
+  {
+    src: France2019Images.annecy16,
+    width: 2363,
+    height: 1772,
+    alt: 'Annecy 16',
+    id: 'thumbnail',
+  },
+  {
+    src: France2019Images.annecy20,
+    width: 2419,
+    height: 1814,
+    alt: 'Annecy 20',
+    id: 'thumbnail',
+  },
+  {
     src: France2019Images.annecy9,
     width: 1920,
     height: 462,
@@ -190,12 +403,312 @@ const annecyList: photoItem[] = [
     id: 'thumbnail',
   },
 ];
-const niceList: photoItem[] = [];
-const monacoList: photoItem[] = [];
-const saintTropezList: photoItem[] = [];
-const bordeauxList: photoItem[] = [];
+const niceList: photoItem[] = [
+  {
+    src: France2019Images.nice1,
+    width: 646,
+    height: 969,
+    alt: 'Nice 1',
+    id: 'thumbnail',
+  },
+  {
+    src: France2019Images.nice2,
+    width: 727,
+    height: 969,
+    alt: 'Nice 2',
+    id: 'thumbnail',
+  },
+  {
+    src: France2019Images.nice3,
+    width: 1453,
+    height: 969,
+    alt: 'Nice 3',
+    id: 'thumbnail',
+  },
+  {
+    src: France2019Images.nice4,
+    width: 2094,
+    height: 1396,
+    alt: 'Nice 4',
+    id: 'thumbnail',
+  },
+  {
+    src: France2019Images.nice5,
+    width: 1731,
+    height: 1298,
+    alt: 'Nice 5',
+    id: 'thumbnail',
+  },
+  {
+    src: France2019Images.nice6,
+    width: 1731,
+    height: 1298,
+    alt: 'Nice 1',
+    id: 'thumbnail',
+  },
+  {
+    src: France2019Images.nice7,
+    width: 2844,
+    height: 864,
+    alt: 'Nice 1',
+    id: 'thumbnail',
+  },
+];
+const monacoList: photoItem[] = [
+  {
+    src: France2019Images.monaco1,
+    width: 1453,
+    height: 969,
+    alt: 'Monaco 1',
+    id: 'thumbnail',
+  },
+  {
+    src: France2019Images.monaco2,
+    width: 1453,
+    height: 969,
+    alt: 'Monaco 2',
+    id: 'thumbnail',
+  },
+  {
+    src: France2019Images.monaco3,
+    width: 1920,
+    height: 592,
+    alt: 'Monaco 3',
+    id: 'thumbnail',
+  },
+  {
+    src: France2019Images.monaco4,
+    width: 1292,
+    height: 969,
+    alt: 'Monaco 4',
+    id: 'thumbnail',
+  },
+  {
+    src: France2019Images.monaco5,
+    width: 1453,
+    height: 969,
+    alt: 'Monaco 5',
+    id: 'thumbnail',
+  },
+  {
+    src: France2019Images.monaco6,
+    width: 1862,
+    height: 1396,
+    alt: 'Monaco 6',
+    id: 'thumbnail',
+  },
+];
+const saintTropezList: photoItem[] = [
+  {
+    src: France2019Images.saintTropez1,
+    width: 646,
+    height: 969,
+    alt: 'Saint Tropez 1',
+    id: 'thumbnail',
+  },
+  {
+    src: France2019Images.saintTropez2,
+    width: 1453,
+    height: 969,
+    alt: 'Saint Tropez 2',
+    id: 'thumbnail',
+  },
+  {
+    src: France2019Images.saintTropez3,
+    width: 646,
+    height: 969,
+    alt: 'Saint Tropez 3',
+    id: 'thumbnail',
+  },
+  {
+    src: France2019Images.saintTropez8,
+    width: 727,
+    height: 969,
+    alt: 'Saint Tropez 8',
+    id: 'thumbnail',
+  },
+  {
+    src: France2019Images.saintTropez5,
+    width: 646,
+    height: 969,
+    alt: 'Saint Tropez 5',
+    id: 'thumbnail',
+  },
+  {
+    src: France2019Images.saintTropez6,
+    width: 1292,
+    height: 969,
+    alt: 'Saint Tropez 6',
+    id: 'thumbnail',
+  },
+  {
+    src: France2019Images.saintTropez7,
+    width: 727,
+    height: 969,
+    alt: 'Saint Tropez 7',
+    id: 'thumbnail',
+  },
+  {
+    src: France2019Images.saintTropez4,
+    width: 646,
+    height: 969,
+    alt: 'Saint Tropez 4',
+    id: 'thumbnail',
+  },
+  {
+    src: France2019Images.saintTropez9,
+    width: 727,
+    height: 969,
+    alt: 'Saint Tropez 9',
+    id: 'thumbnail',
+  },
+];
+const bordeauxList: photoItem[] = [
+  {
+    src: France2019Images.bordeaux1,
+    width: 1453,
+    height: 969,
+    alt: 'Bordeaux 1',
+    id: 'thumbnail',
+  },
+  {
+    src: France2019Images.bordeaux2,
+    width: 1920,
+    height: 935,
+    alt: 'Bordeaux 2',
+    id: 'thumbnail',
+  },
+  {
+    src: France2019Images.bordeaux4,
+    width: 1292,
+    height: 969,
+    alt: 'Bordeaux 1',
+    id: 'thumbnail',
+  },
+  {
+    src: France2019Images.bordeaux5,
+    width: 1292,
+    height: 969,
+    alt: 'Bordeaux 5',
+    id: 'thumbnail',
+  },
+  {
+    src: France2019Images.bordeaux6,
+    width: 1292,
+    height: 969,
+    alt: 'Bordeaux 6',
+    id: 'thumbnail',
+  },
+  {
+    src: France2019Images.bordeaux7,
+    width: 1292,
+    height: 969,
+    alt: 'Bordeaux 7',
+    id: 'thumbnail',
+  },
+  {
+    src: France2019Images.bordeaux8,
+    width: 1453,
+    height: 969,
+    alt: 'Bordeaux 8',
+    id: 'thumbnail',
+  },
+  {
+    src: France2019Images.bordeaux3,
+    width: 1920,
+    height: 521,
+    alt: 'Bordeaux 3',
+    id: 'thumbnail',
+  },
+];
+const saintEmilionList: photoItem[] = [
+  {
+    src: France2019Images.saintEmilion1,
+    width: 1292,
+    height: 969,
+    alt: 'Saint Emilion 1',
+    id: 'thumbnail',
+  },
+  {
+    src: France2019Images.saintEmilion10,
+    width: 727,
+    height: 969,
+    alt: 'Saint Emilion 10',
+    id: 'thumbnail',
+  },
+  {
+    src: France2019Images.saintEmilion2,
+    width: 727,
+    height: 969,
+    alt: 'Saint Emilion 2',
+    id: 'thumbnail',
+  },
+  {
+    src: France2019Images.saintEmilion3,
+    width: 727,
+    height: 969,
+    alt: 'Saint Emilion 3',
+    id: 'thumbnail',
+  },
+  {
+    src: France2019Images.saintEmilion4,
+    width: 727,
+    height: 969,
+    alt: 'Saint Emilion 4',
+    id: 'thumbnail',
+  },
+  {
+    src: France2019Images.saintEmilion5,
+    width: 1920,
+    height: 644,
+    alt: 'Saint Emilion 5',
+    id: 'thumbnail',
+  },
+  {
+    src: France2019Images.saintEmilion6,
+    width: 727,
+    height: 969,
+    alt: 'Saint Emilion 6',
+    id: 'thumbnail',
+  },
+  {
+    src: France2019Images.saintEmilion7,
+    width: 1292,
+    height: 969,
+    alt: 'Saint Emilion 7',
+    id: 'thumbnail',
+  },
+  {
+    src: France2019Images.saintEmilion8,
+    width: 1292,
+    height: 969,
+    alt: 'Saint Emilion 8',
+    id: 'thumbnail',
+  },
+  {
+    src: France2019Images.saintEmilion9,
+    width: 1292,
+    height: 969,
+    alt: 'Saint Emilion 9',
+    id: 'thumbnail',
+  },
+  {
+    src: France2019Images.saintEmilion11,
+    width: 727,
+    height: 969,
+    alt: 'Saint Emilion 1',
+    id: 'thumbnail',
+  },
+  {
+    src: France2019Images.saintEmilion12,
+    width: 1292,
+    height: 969,
+    alt: 'Saint Emilion 12',
+    id: 'thumbnail',
+  },
+];
 
-// Exportable object
+// Exportable object for travel component
 export const franceList: francePlaces = {
   paris: parisList,
   annecy: annecyList,
@@ -203,4 +716,5 @@ export const franceList: francePlaces = {
   monaco: monacoList,
   saintTropez: saintTropezList,
   bordeaux: bordeauxList,
+  saintEmilion: saintEmilionList,
 };

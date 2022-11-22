@@ -1,24 +1,25 @@
 import React from 'react';
-import MyGallery, { gridCSS } from '../../../../components/Gallery/gallery';
-import { TravelPageTitles } from '../../../../util/types';
-import { parisList } from '../france/albumLists';
+import MyGallery from '../../../../components/Gallery/gallery';
+import { westTexasList } from './albumLists';
+import './WestTexas.scss';
 
-interface travelAlbumProps {
-  title: TravelPageTitles;
-}
-
-function WestTexas({ title }: travelAlbumProps) {
-  const section1: gridCSS = {
-    display: 'grid',
-    gridTemplateColumns: '240px 271px 171px',
-    gridTemplateRows: '114px 114px',
-    gridGap: 12,
-  };
-
+function WestTexas() {
   return (
     <div className="travel-album-container">
-      <div>{title} album goes here </div>
-      <MyGallery photos={parisList} grid={section1} />
+      <h2 className="title">Guadalupe Mountains</h2>
+      <div className="gallery-wrapper">
+        <MyGallery photos={westTexasList.guadeloupeMountains} />
+      </div>
+
+      <h2 className="title">New Mexio White Sands</h2>
+      <div className="gallery-wrapper">
+        <MyGallery photos={westTexasList.whiteSands} />
+      </div>
+
+      <h2 className="title">On the Road</h2>
+      <div className="gallery-wrapper">
+        <MyGallery photos={westTexasList.ontheRoad} />
+      </div>
     </div>
   );
 }

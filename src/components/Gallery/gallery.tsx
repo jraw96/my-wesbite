@@ -10,17 +10,8 @@ import './gallery.scss';
 // Codepen example:
 // https://codesandbox.io/s/react-photo-gallery-with-image-viewer-forked-c21wfp?file=/index.js:1058-1107
 
-// Not used:
-export interface gridCSS {
-  display: string;
-  gridTemplateColumns: string;
-  gridTemplateRows: any;
-  gridGap: number;
-}
-
 interface props {
   photos: photoItem[];
-  grid?: gridCSS;
 }
 
 interface element {

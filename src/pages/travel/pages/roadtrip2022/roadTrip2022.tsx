@@ -1,24 +1,39 @@
-import React from 'react';
-import MyGallery, { gridCSS } from '../../../../components/Gallery/gallery';
-import { TravelPageTitles } from '../../../../util/types';
-import { parisList } from '../france/albumLists';
+import MyGallery from '../../../../components/Gallery/gallery';
+import { roadTrip2022List } from './albumLists';
+import './roadTrip2022.scss';
 
-interface travelAlbumProps {
-  title: TravelPageTitles;
-}
-
-function RoadTrip2022({ title }: travelAlbumProps) {
-  const section1: gridCSS = {
-    display: 'grid',
-    gridTemplateColumns: '240px 271px 171px',
-    gridTemplateRows: '114px 114px',
-    gridGap: 12,
-  };
-
+function RoadTrip2022() {
   return (
     <div className="travel-album-container">
-      <div>{title} album goes here </div>
-      <MyGallery photos={parisList} grid={section1} />
+      <h2 className="title">Grand Canyon </h2>
+      <div className="gallery-wrapper">
+        <MyGallery photos={roadTrip2022List.grandCanyon} />
+      </div>
+
+      <h2 className="title">Canyonlands </h2>
+      <div className="gallery-wrapper">
+        <MyGallery photos={roadTrip2022List.canyonLands} />
+      </div>
+
+      <h2 className="title">Arches</h2>
+      <div className="gallery-wrapper">
+        <MyGallery photos={roadTrip2022List.arches} />
+      </div>
+
+      <h2 className="title">Dead Horse</h2>
+      <div className="gallery-wrapper">
+        <MyGallery photos={roadTrip2022List.deadHorse} />
+      </div>
+
+      <h2 className="title">Zion</h2>
+      <div className="gallery-wrapper">
+        <MyGallery photos={roadTrip2022List.zion} />
+      </div>
+
+      <h2 className="title">Yosemite </h2>
+      <div className="gallery-wrapper">
+        <MyGallery photos={roadTrip2022List.yosemite} />
+      </div>
     </div>
   );
 }

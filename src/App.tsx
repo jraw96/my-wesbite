@@ -32,19 +32,19 @@ function App() {
       case '/france':
         return <France />;
       case '/austin':
-        return <Austin title={obj.albumPreview.title} />;
+        return <Austin />;
       case '/miami':
-        return <Miami title={obj.albumPreview.title} />;
+        return <Miami />;
       case '/vietnam':
-        return <Vietnam title={obj.albumPreview.title} />;
+        return <Vietnam />;
       case '/toronto':
-        return <Toronto title={obj.albumPreview.title} />;
+        return <Toronto />;
       case '/roadtrip-2022':
-        return <RoadTrip2022 title={obj.albumPreview.title} />;
+        return <RoadTrip2022 />;
       case '/west-texas':
-        return <WestTexas title={obj.albumPreview.title} />;
+        return <WestTexas />;
       case '/san-francisco':
-        return <SanFrancisco title={obj.albumPreview.title} />;
+        return <SanFrancisco />;
     }
   };
 
