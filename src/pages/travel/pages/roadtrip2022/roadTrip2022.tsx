@@ -10,6 +10,11 @@ function RoadTrip2022() {
         <MyGallery photos={roadTrip2022List.grandCanyon} />
       </div>
 
+      <h2 className="title">Monument Valley </h2>
+      <div className="gallery-wrapper">
+        <MyGallery photos={roadTrip2022List.monumentValley} />
+      </div>
+
       <h2 className="title">Canyonlands </h2>
       <div className="gallery-wrapper">
         <MyGallery photos={roadTrip2022List.canyonLands} />
