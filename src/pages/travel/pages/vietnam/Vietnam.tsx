@@ -25,6 +25,10 @@ function Vietnam() {
       <div className="gallery-wrapper">
         <MyGallery photos={vietnamList.hue} />
       </div>
+      <h2 className="title">Hải Vân Pass</h2>
+      <div className="gallery-wrapper">
+        <MyGallery photos={vietnamList.haiVanPass} />
+      </div>
       <h2 className="title">Hội An</h2>
       <div className="gallery-wrapper">
         <MyGallery photos={vietnamList.hoiAnn} />
