@@ -1,6 +1,6 @@
 import MyGallery from '../../../../components/Gallery/gallery';
 import { miamiList } from './albumLists';
-import './Miami.scss';
+// import './Miami.scss';
 
 function Miami() {
   return (
