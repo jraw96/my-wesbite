@@ -1,6 +1,5 @@
 import { debounce } from 'lodash';
 import React, { useCallback, useState } from 'react';
-import { useLocation } from 'react-router-dom';
 import { pages } from '../../util/types';
 
 import './Navbar.scss';

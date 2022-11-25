@@ -1,5 +1,3 @@
-import React from 'react';
-
 import './Home.scss';
 import {
   France2019Images,
@@ -22,15 +20,6 @@ function Home({ show }: props) {
     width: 416,
     title: 'Driving to the Guadeloupe Mountains TX, USA - 2021',
     link: `${window.location.origin}${pages.travel}${TravelPageRoutes.westTexas}`,
-  };
-
-  // Paris pic
-  const imageProps2: imageProps = {
-    src: France2019Images.paris2,
-    alt: 'Odette French Bakery',
-    width: 400,
-    title: 'Oddette Bakery, Paris, FR - 2019',
-    link: `${window.location.origin}${pages.travel}${TravelPageRoutes.france}`,
   };
 
   // Vietnam buncha pic
