@@ -925,6 +925,7 @@ const saigon: photoItem[] = [
   },
 ];
 
+//test
 export const vietnamList: vietnamPlaces = {
   hanoi: hanoi,
   haLongBay: haLongBay,
