@@ -7,90 +7,91 @@ export interface roadTrip2022Places {
   canyonLands: photoItem[];
   arches: photoItem[];
   deadHorse: photoItem[];
+  bryceCanyon: photoItem[];
   zion: photoItem[];
   yosemite: photoItem[];
 }
 
 const grandCanyon: photoItem[] = [
   {
-    src: TravelRoadTrip2022Imagees.roadTrip4,
+    src: TravelRoadTrip2022Imagees.grandcanyon4,
     width: 4032,
     height: 3024,
     alt: 'Grand Canyon 4',
     id: 'thumbnail',
   },
   {
-    src: TravelRoadTrip2022Imagees.roadTrip5,
+    src: TravelRoadTrip2022Imagees.grandcanyon5,
     width: 853,
     height: 1138,
     alt: 'Grand Canyon 5',
     id: 'thumbnail',
   },
   {
-    src: TravelRoadTrip2022Imagees.roadTrip2,
+    src: TravelRoadTrip2022Imagees.grandcanyon2_lowres,
     width: 6022,
     height: 4024,
     alt: 'Grand Canyon 2',
     id: 'thumbnail',
   },
   {
-    src: TravelRoadTrip2022Imagees.roadTrip3,
+    src: TravelRoadTrip2022Imagees.grandcanyon3_lowres,
     width: 6022,
     height: 4024,
     alt: 'Grand Canyon 3',
     id: 'thumbnail',
   },
   {
-    src: TravelRoadTrip2022Imagees.roadTrip6,
+    src: TravelRoadTrip2022Imagees.grandcanyon6,
     width: 4032,
     height: 3024,
     alt: 'Grand Canyon 6',
     id: 'thumbnail',
   },
   {
-    src: TravelRoadTrip2022Imagees.roadTrip7,
+    src: TravelRoadTrip2022Imagees.grandcanyon7,
     width: 4032,
     height: 3024,
     alt: 'Grand Canyon 7',
     id: 'thumbnail',
   },
   {
-    src: TravelRoadTrip2022Imagees.roadTrip8,
+    src: TravelRoadTrip2022Imagees.grandcanyon8,
     width: 4032,
     height: 3024,
     alt: 'Grand Canyon 8',
     id: 'thumbnail',
   },
   {
-    src: TravelRoadTrip2022Imagees.roadTrip9,
+    src: TravelRoadTrip2022Imagees.grandcanyon9,
     width: 4032,
     height: 3024,
     alt: 'Grand Canyon 9',
     id: 'thumbnail',
   },
   {
-    src: TravelRoadTrip2022Imagees.roadTrip10,
+    src: TravelRoadTrip2022Imagees.grandcanyon10,
     width: 4032,
     height: 3024,
     alt: 'Grand Canyon 10',
     id: 'thumbnail',
   },
   {
-    src: TravelRoadTrip2022Imagees.roadTrip11,
+    src: TravelRoadTrip2022Imagees.grandcanyon11,
     width: 853,
     height: 1135,
     alt: 'Grand Canyon 11',
     id: 'thumbnail',
   },
   {
-    src: TravelRoadTrip2022Imagees.roadTrip12,
+    src: TravelRoadTrip2022Imagees.grandcanyon12,
     width: 4032,
     height: 3024,
     alt: 'Grand Canyon 12',
     id: 'thumbnail',
   },
   {
-    src: TravelRoadTrip2022Imagees.roadTrip13,
+    src: TravelRoadTrip2022Imagees.grandcanyon13,
     width: 853,
     height: 1138,
     alt: 'Grand Canyon 13',
@@ -217,6 +218,59 @@ const deadHorse: photoItem[] = [
     id: 'thumbnail',
   },
 ];
+
+const bryce: photoItem[] = [
+  {
+    src: TravelRoadTrip2022Imagees.bryce1,
+    width: 727,
+    height: 969,
+    alt: 'Bryce 1',
+    id: 'thumbnail',
+  },
+  {
+    src: TravelRoadTrip2022Imagees.bryce2,
+    width: 727,
+    height: 969,
+    alt: 'Bryce 2',
+    id: 'thumbnail',
+  },
+  {
+    src: TravelRoadTrip2022Imagees.bryce4,
+    width: 1292,
+    height: 969,
+    alt: 'Bryce 4',
+    id: 'thumbnail',
+  },
+  {
+    src: TravelRoadTrip2022Imagees.bryce5,
+    width: 727,
+    height: 969,
+    alt: 'Bryce 5',
+    id: 'thumbnail',
+  },
+  {
+    src: TravelRoadTrip2022Imagees.bryce6,
+    width: 727,
+    height: 969,
+    alt: 'Bryce 6',
+    id: 'thumbnail',
+  },
+  {
+    src: TravelRoadTrip2022Imagees.bryce7,
+    width: 727,
+    height: 969,
+    alt: 'Bryce 7',
+    id: 'thumbnail',
+  },
+  {
+    src: TravelRoadTrip2022Imagees.bryce8,
+    width: 1292,
+    height: 969,
+    alt: 'Bryce 8',
+    id: 'thumbnail',
+  },
+];
+
 const zion: photoItem[] = [
   {
     src: TravelRoadTrip2022Imagees.zion1,
@@ -233,7 +287,7 @@ const zion: photoItem[] = [
     id: 'thumbnail',
   },
   {
-    src: TravelRoadTrip2022Imagees.zion5,
+    src: TravelRoadTrip2022Imagees.zion5_lowres,
     width: 6022,
     height: 4024,
     alt: 'Zion 5',
@@ -254,7 +308,7 @@ const zion: photoItem[] = [
     id: 'thumbnail',
   },
   {
-    src: TravelRoadTrip2022Imagees.zion6,
+    src: TravelRoadTrip2022Imagees.zion6_lowres,
     width: 6022,
     height: 4024,
     alt: 'Zion 6',
@@ -326,7 +380,7 @@ const yosemite: photoItem[] = [
     id: 'thumbnail',
   },
   {
-    src: TravelRoadTrip2022Imagees.yosemite5,
+    src: TravelRoadTrip2022Imagees.yosemite5_lowres,
     width: 6022,
     height: 4024,
     alt: 'Yosemite 5',
@@ -361,6 +415,7 @@ export const roadTrip2022List: roadTrip2022Places = {
   canyonLands: canyonLands,
   arches: arches,
   deadHorse: deadHorse,
+  bryceCanyon: bryce,
   zion: zion,
   yosemite: yosemite,
 };
