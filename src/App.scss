@@ -23,14 +23,47 @@ p {
 
 
 .app-container {
+    /*
     margin: 16px 0px 16px 0px;
     padding: 0px;
     width: 100%;
+    */
 
+    display: grid;
+
+    // Colums: navbar, divider, content
+    // grid-template-columns: 250px, 65px, auto;
+    //grid-template-columns: 250px, 65px, auto;
+
+    // Make 2 rows, with the fixed row having a fixed heaight of 325, and the second row auto. 
+    grid-template-rows: 325px auto;
+    grid-template-rows: auto auto;
+    grid-template-areas: 
+        "nav divider top top top top top top top top"
+        "page page page page page page page page page page"
+    ;
+
+    .nav-container {
+        grid-area: nav;
+      //  max-width: 325px;
+    }
+
+    .divider-container {
+        grid-area: divider;
+    }
+
+    .top-container {
+        grid-area: top;
+    }
 
     .page-container {
+
+        grid-area: page;
+
+        /*
         display: flex;
         flex-direction: row;
+        */
 
         .column-container {
             display: flex;
@@ -64,35 +97,35 @@ p {
         .routes-container {
             width: calc(100vw - 473px);
             display: flex;
-            left: var(--left-content-alignment);
+            //left: var(--left-content-alignment);
             position: absolute;
             top: 0px;
         }
 
         .-positioning {
-            top: var(--first-level-top-alignment);
+            //top: var(--first-level-top-alignment);
         }
 
         .about-positioning {
-            top: var(--second-level-top-alignment);
+            //top: var(--second-level-top-alignment);
         }
 
         .travel-positioning {
-            top: var(--third-level-top-alignment);
+           // top: var(--third-level-top-alignment);
         }
 
         .travel-album-container {
-            width: inherit;
-            position: absolute;
-            top: var(--third-level-top-alignment);
+           // width: inherit;
+           // position: absolute;
+            //top: var(--third-level-top-alignment);
         }
 
         .books-positioning {
-            top: var(--fourth-level-top-alignment);
+           // top: var(--fourth-level-top-alignment);
         }
 
         .contact-positioning {
-            top: var(--fifth-level-top-alignment);
+          //  top: var(--fifth-level-top-alignment);
         }
     }
 }

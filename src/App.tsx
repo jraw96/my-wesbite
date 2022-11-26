@@ -50,38 +50,41 @@ function App() {
 
   return (
     <div className="app-container">
-      <Navbar
-        Link={Link}
-        pathname={pathname}
-        clickHome={() => clickedHome(true)}
-        hasClickedHome={hasClickedHome}
-      />
-      <div className="page-container">
+      <div className="nav-container">
+        <Navbar
+          Link={Link}
+          pathname={pathname}
+          clickHome={() => clickedHome(true)}
+          hasClickedHome={hasClickedHome}
+        />
+      </div>
+      <div className="divider-container">
+        divider
         <div
           className={`column-container ${showColumnThing ? 'show-column' : ''}`}
         ></div>
-        <div className="separator-container">
-          <h1>Contact</h1>
-        </div>
         <div
           className={`routes-container ${pathname?.substring(1)}-positioning`}
-        >
-          <Routes>
-            <Route path={pages.home} element={<Home show={hasClickedHome} />} />
-            <Route path={pages.about} element={<About />} />
-            <Route
-              path={pages.travel}
-              element={<Travel thumbnails={travelRoutes} />}
-            />
-            {/* Travel Album pages - eg. travel/austin  */}
-            {travelRoutes.map((obj: travelPageRouteObject) => {
-              const pathname = `${pages.travel}${obj.path}`;
-              return <Route path={pathname} element={getAlbum(obj)} />;
-            })}
-            <Route path={pages.books} element={<Books />} />
-            <Route path={pages.contact} element={<Contact />} />
-          </Routes>
-        </div>
+        ></div>
+      </div>
+      <div className="top-container"></div>
+
+      <div className="page-container">
+        <Routes>
+          <Route path={pages.home} element={<Home show={hasClickedHome} />} />
+          <Route path={pages.about} element={<About />} />
+          <Route
+            path={pages.travel}
+            element={<Travel thumbnails={travelRoutes} />}
+          />
+          {/* Travel Album pages - eg. travel/austin  */}
+          {travelRoutes.map((obj: travelPageRouteObject) => {
+            const pathname = `${pages.travel}${obj.path}`;
+            return <Route path={pathname} element={getAlbum(obj)} />;
+          })}
+          <Route path={pages.books} element={<Books />} />
+          <Route path={pages.contact} element={<Contact />} />
+        </Routes>
       </div>
     </div>
   );
