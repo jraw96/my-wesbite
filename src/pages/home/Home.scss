@@ -1,51 +1,52 @@
 .home-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: start;
+  min-height: inherit;
+
+  .home-image-container {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: start;
-    min-height: inherit;
+    margin-right: 54px;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+
+  .col {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
 
     .image-container {
-        display: flex;
-        margin-right: 54px;
-        margin-top: auto;
-        margin-bottom: auto;
+      margin: auto 24px auto 0px;
     }
 
-    .col {
-        display: flex;
-        flex-direction: column;
-        justify-content: left;
-        margin-bottom: 0px;
+    .content-container {
+      display: flex;
+      flex-direction: column;
+      background-color: rgba(255, 255, 255, 0.5);
+      border-radius: 10px;
+      height: 158px;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      padding: 16px;
+      text-align: left;
 
-        .content-container {
-            display: flex;
-            flex-direction: column;
-
-            background-color: rgba(255,255,255,0.5);
-
-            margin: auto 0;
-    
-    
-            border-radius: 10px;
-            width: 368px;
-            height: 158px;
-            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; 
-            padding: 16px;
-    
-            text-align: left;
-            margin-right: 54px;
-    
-            .first-sentence {
-               // margin-top: 54px
-            }
-    
-            .text {
-                margin-bottom: 12px
-            }
-        }
+      .text {
+        margin-bottom: 12px;
+      }
     }
+  }
 }
 
+// Add top margin when the screen is condensed to the mobile section
+@media only screen and (max-width: 953px) {
+  .mobile-home-spacing {
+    margin: 24px 0px 0px 0px;
+  }
+}
 
-
+@media only screen and (min-width: 954px) {
+  .mobile-home-spacing {
+    margin: auto 0;
+  }
+}

@@ -1,9 +1,5 @@
 import './Home.scss';
-import {
-  France2019Images,
-  HomeImages,
-  Vietnam2019Images,
-} from '../../util/images-urls';
+import { HomeImages, Vietnam2019Images } from '../../util/images-urls';
 import ImageRender, {
   imageProps,
 } from '../../components/imageRender/ImageRender';
@@ -42,13 +38,13 @@ function Home({ show }: props) {
             </div>
           </div>
           <div className="col">
-            <div className="content-container">
+            <div className="content-container mobile-home-spacing">
               <p className="first-sentence text">
-                Hello, and welcome to my website!
+                Hello, and welcome to my website.
               </p>
               <p className="text">
                 Here you can find my latest travels and discussion about books
-                I've read!
+                I've read.
               </p>
               <p className="text">More content to come later.</p>
               <p className="text"> Cheers, </p>

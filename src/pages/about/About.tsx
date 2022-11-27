@@ -24,7 +24,7 @@ function About() {
         </div>
       </div>
       <div className="col">
-        <div className="content-container">
+        <div className="content-container mobile-about-spacing">
           <p className="first-sentence text">Hi, I'm Jake!</p>
           <p className="text">
             I'm a software engineer based in Austin, Texas.

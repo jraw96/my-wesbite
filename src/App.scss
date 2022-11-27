@@ -9,17 +9,6 @@ p {
 // App wide css variables
 :root {
   --fill-color: #5b4854;
-  --left-content-alignment: 420px;
-  --first-level-top-alignment: 145px;
-  --second-level-top-alignment: 210px;
-  --third-level-top-alignment: 285px;
-  --fourth-level-top-alignment: 360px;
-  --fifth-level-top-alignment: 435px;
-
-  // Spacing for banner text
-  --banner-text-right-alignment: 236px;
-
-  --about-collapse-treshold: 1665px;
 }
 
 .app-container {
@@ -38,7 +27,7 @@ p {
     'page page page page page page page page page page';
 
   // Apply rules when the screen size is 600px or less
-  @media only screen and (max-width: 1347px) {
+  @media only screen and (max-width: 1414px) {
     .desktop-home {
       display: none;
     }
@@ -49,9 +38,10 @@ p {
   }
 
   // Apply rules when the screen size is 1347px or more
-  @media only screen and (min-width: 1348px) {
+  @media only screen and (min-width: 1415px) {
     .desktop-home {
       display: initial;
+      min-height: inherit;
     }
 
     .mobile-home {
@@ -60,7 +50,7 @@ p {
   }
 
   // Apply rules when the screen size is 600px or less
-  @media only screen and (max-width: 1682px) {
+  @media only screen and (max-width: 1595px) {
     .desktop-about {
       display: none;
     }
@@ -71,7 +61,7 @@ p {
   }
 
   // Apply rules when the screen size is 1347px or more
-  @media only screen and (min-width: 1683px) {
+  @media only screen and (min-width: 1596px) {
     .desktop-about {
       display: initial;
     }
