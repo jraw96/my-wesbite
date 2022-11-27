@@ -1,8 +1,4 @@
-
-
-@import url("https://fonts.googleapis.com/css?family=Raleway:400,400i,700"); // Navbar fonts
-
-
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,400i,700'); // Navbar fonts
 
 .navigation-section {
   display: flex;
@@ -10,51 +6,46 @@
 
   .menu {
     display: flex;
-    min-width:300px;
+    min-width: 300px;
 
     .hr-container {
       width: 100%;
-    
-    
-    
+
       .hr-settings {
-        right: 100%; 
-        // transition: 0.5s; 
+        right: 100%;
+        // transition: 0.5s;
       }
-    
+
       .animate {
         right: 0;
       }
-    
+
       .show-hr {
         opacity: 1;
       }
-    
+
       .hide-hr {
         opacity: 0;
       }
-    
     }
-    
+
     .current-page {
       color: var(--fill-color);
     }
-    
+
     .half-opacity {
       opacity: 0.5;
     }
-    
-    
-    
+
     .nav-row {
       display: flex;
       flex-direction: row;
     }
-    
+
     .right-spacing {
       //margin-right: var(--banner-text-right-alignment);
     }
-    
+
     .travel-spacing {
       // margin-right: 199px;
     }
@@ -63,8 +54,8 @@
   .column-thing {
     border-left: 2px solid var(--fill-color);
     border-right: 2px solid var(--fill-color);
-    border-bottom: 2px solid var(--fill-color);
     min-width: 65px;
+    height: 386px;
 
     // Me cheating to line up containers:
     //transform: translateY(-8px);
