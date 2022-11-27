@@ -4,12 +4,6 @@
   flex-direction: row;
   flex-wrap: wrap;
 
-  .image-container {
-    margin-right: 24px;
-    margin-top: auto;
-    margin-bottom: auto;
-  }
-
   .col {
     display: flex;
     flex-direction: column;
@@ -59,6 +53,12 @@
   .justify-about {
     justify-content: center;
   }
+
+  .margin-img-about {
+    margin-right: 0px;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
 }
 
 @media only screen and (min-width: 1264px) {
@@ -68,5 +68,11 @@
 
   .justify-about {
     justify-content: left;
+  }
+
+  .margin-img-about {
+    margin-right: 24px;
+    margin-top: auto;
+    margin-bottom: auto;
   }
 }

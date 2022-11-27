@@ -19,7 +19,7 @@ function About() {
   return (
     <div className="about-container justify-about">
       <div className="col">
-        <div className="image-container">
+        <div className="image-container margin-img-about">
           <ImageRender {...imageProps1} />
         </div>
       </div>

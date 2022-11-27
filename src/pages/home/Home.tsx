@@ -33,7 +33,7 @@ function Home({ show }: props) {
       {
         <div className="home-container justify-home">
           <div className="col">
-            <div className="image-container">
+            <div className="image-container margin-img-home">
               <ImageRender {...imageProps1} />
             </div>
           </div>

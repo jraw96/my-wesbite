@@ -7,19 +7,12 @@
 
   .home-image-container {
     display: flex;
-    margin-right: 54px;
-    margin-top: auto;
-    margin-bottom: auto;
   }
 
   .col {
     display: flex;
     flex-direction: column;
     justify-content: left;
-
-    .image-container {
-      margin: auto 24px auto 0px;
-    }
 
     .content-container {
       display: flex;
@@ -47,6 +40,12 @@
   .justify-home {
     justify-content: center;
   }
+
+  .margin-img-home {
+    margin-right: 0px;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
 }
 
 @media only screen and (min-width: 954px) {
@@ -56,5 +55,11 @@
 
   .justify-home {
     justify-content: start;
+  }
+
+  .margin-img-home {
+    margin-right: 24px;
+    margin-top: auto;
+    margin-bottom: auto;
   }
 }
