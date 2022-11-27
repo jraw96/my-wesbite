@@ -43,10 +43,18 @@
   .mobile-home-spacing {
     margin: 24px 0px 0px 0px;
   }
+
+  .justify-home {
+    justify-content: center;
+  }
 }
 
 @media only screen and (min-width: 954px) {
   .mobile-home-spacing {
     margin: auto 0;
+  }
+
+  .justify-home {
+    justify-content: start;
   }
 }
