@@ -59,20 +59,44 @@ function App() {
         />
       </div>
       <div className="top-container">
+        {/* Conditionally display pages in the top section, for large desktop screens */}
+
+        <div className="desktop-home">
+          <Routes>
+            <Route path={pages.home} element={<Home show={hasClickedHome} />} />
+          </Routes>
+        </div>
+        <div className="desktop-about">
+          <Routes>
+            <Route path={pages.about} element={<About />} />
+          </Routes>
+        </div>
         <Routes>
-          <Route path={pages.home} element={<Home show={hasClickedHome} />} />
-          <Route path={pages.about} element={<About />} />
           <Route path={pages.contact} element={<Contact />} />
         </Routes>
       </div>
       <div className="divider-container"></div>
       <div className="page-container">
+        {/* Conditionally display pages in the lower section, based on screen size */}
+
+        <div className="mobile-home">
+          <Routes>
+            <Route path={pages.home} element={<Home show={hasClickedHome} />} />
+          </Routes>
+        </div>
+        <div className="mobile-about">
+          <Routes>
+            <Route path={pages.about} element={<About />} />
+          </Routes>
+        </div>
+
+        {/* Travel Album content - eg. travel/austin  */}
         <Routes>
+          <Route path={pages.contact} element={<Contact />} />
           <Route
             path={pages.travel}
             element={<Travel thumbnails={travelRoutes} />}
           />
-          {/* Travel Album pages - eg. travel/austin  */}
           {travelRoutes.map((obj: travelPageRouteObject) => {
             const pathname = `${pages.travel}${obj.path}`;
             return <Route path={pathname} element={getAlbum(obj)} />;

@@ -1,125 +1,141 @@
 @import url('https://fonts.googleapis.com/css2?family=Domine&display=swap');
-@import url("https://fonts.googleapis.com/css?family=Raleway:400,400i,700");
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,400i,700');
 
 p {
   font-family: 'Raleway', serif;
   margin: 0px;
 }
 
-
 // App wide css variables
 :root {
-    --fill-color: #5b4854;
-    --left-content-alignment: 420px;
-    --first-level-top-alignment: 145px;
-    --second-level-top-alignment: 210px;
-    --third-level-top-alignment: 285px;
-    --fourth-level-top-alignment: 360px;
-    --fifth-level-top-alignment: 435px;
+  --fill-color: #5b4854;
+  --left-content-alignment: 420px;
+  --first-level-top-alignment: 145px;
+  --second-level-top-alignment: 210px;
+  --third-level-top-alignment: 285px;
+  --fourth-level-top-alignment: 360px;
+  --fifth-level-top-alignment: 435px;
 
-    // Spacing for banner text
-    --banner-text-right-alignment: 236px;
+  // Spacing for banner text
+  --banner-text-right-alignment: 236px;
+
+  --about-collapse-treshold: 1665px;
 }
 
-
 .app-container {
-    display: grid;
+  display: grid;
 
-    // Colums: navbar, divider, content
-    // grid-template-columns: 250px, 65px, auto;
-    //grid-template-columns: 250px, 65px, auto;
+  // Colums: navbar, divider, content
+  // grid-template-columns: 250px, 65px, auto;
+  //grid-template-columns: 250px, 65px, auto;
 
-    // Make 3 rows, with the fixed row having a fixed heaight of 396, and the second row auto. 
-    //grid-template-rows: 325px auto;
-    grid-template-rows: 386px auto auto;
-    grid-template-areas: 
-        "nav nav top top top top top top top top"
-        "divider divider divider divider divider divider divider divider divider divider"
-        "page page page page page page page page page page"
-    ;
+  // Make 3 rows, with the fixed row having a fixed heaight of 396, and the second row auto.
+  //grid-template-rows: 325px auto;
+  grid-template-rows: 386px auto 100%;
+  grid-template-areas:
+    'nav nav top top top top top top top top'
+    'divider divider divider divider divider divider divider divider divider divider'
+    'page page page page page page page page page page';
 
-    .nav-container {
-        grid-area: nav;
+  // Apply rules when the screen size is 600px or less
+  @media only screen and (max-width: 1347px) {
+    .desktop-home {
+      display: none;
     }
 
-    .divider-container {
-        grid-area: divider;
-        min-height: 65px;
-        border-top: 2px solid var(--fill-color);
-        border-bottom: 2px solid var(--fill-color);
+    .mobile-home {
+      display: initial;
+    }
+  }
+
+  // Apply rules when the screen size is 1347px or more
+  @media only screen and (min-width: 1348px) {
+    .desktop-home {
+      display: initial;
     }
 
-    .top-container {
-        grid-area: top;
-        align-self: start;
-        min-height: 386px;
+    .mobile-home {
+      display: none;
+    }
+  }
+
+  // Apply rules when the screen size is 600px or less
+  @media only screen and (max-width: 1682px) {
+    .desktop-about {
+      display: none;
     }
 
-    .page-container {
-        grid-area: page;
-        padding: 27px;
-
-        .column-container {
-            display: flex;
-
-            min-width: 60px;
-            border-left: 2px solid var(--fill-color);
-            border-right: 2px solid var(--fill-color);
-            margin-right: 40px;
-            margin-left: 306px; // Eventually make this the width of the CONTACT string, but hidden
-            display: none;
-        }
-
-        .show-column {
-            // Make the border stretch to the top of screen
-            top: 0;
-            position: absolute;
-            height: 100%;
-            display: initial;
-        }
-
-        .separator-container {
-           opacity: 0;
-           margin-left: 40px;
-           margin-right: 148px;
-        }
-        
-        .separator-container:hover {
-            cursor: default;
-        }
-
-        .routes-container {
-            width: calc(100vw - 473px);
-            display: flex;
-            //left: var(--left-content-alignment);
-            position: absolute;
-            top: 0px;
-        }
-
-        .-positioning {
-            //top: var(--first-level-top-alignment);
-        }
-
-        .about-positioning {
-            //top: var(--second-level-top-alignment);
-        }
-
-        .travel-positioning {
-           // top: var(--third-level-top-alignment);
-        }
-
-        .travel-album-container {
-           // width: inherit;
-           // position: absolute;
-            //top: var(--third-level-top-alignment);
-        }
-
-        .books-positioning {
-           // top: var(--fourth-level-top-alignment);
-        }
-
-        .contact-positioning {
-          //  top: var(--fifth-level-top-alignment);
-        }
+    .mobile-about {
+      display: initial;
     }
+  }
+
+  // Apply rules when the screen size is 1347px or more
+  @media only screen and (min-width: 1683px) {
+    .desktop-about {
+      display: initial;
+    }
+
+    .mobile-about {
+      display: none;
+    }
+  }
+
+  .nav-container {
+    grid-area: nav;
+  }
+
+  .divider-container {
+    grid-area: divider;
+    min-height: 65px;
+    border-top: 2px solid var(--fill-color);
+    border-bottom: 2px solid var(--fill-color);
+  }
+
+  .top-container {
+    grid-area: top;
+    align-self: start;
+    min-height: 386px;
+  }
+
+  .page-container {
+    grid-area: page;
+    padding: 27px;
+
+    .column-container {
+      display: flex;
+
+      min-width: 60px;
+      border-left: 2px solid var(--fill-color);
+      border-right: 2px solid var(--fill-color);
+      margin-right: 40px;
+      margin-left: 306px; // Eventually make this the width of the CONTACT string, but hidden
+      display: none;
+    }
+
+    .show-column {
+      // Make the border stretch to the top of screen
+      top: 0;
+      position: absolute;
+      height: 100%;
+      display: initial;
+    }
+
+    .separator-container {
+      opacity: 0;
+      margin-left: 40px;
+      margin-right: 148px;
+    }
+
+    .separator-container:hover {
+      cursor: default;
+    }
+
+    .routes-container {
+      width: calc(100vw - 473px);
+      display: flex;
+      position: absolute;
+      top: 0px;
+    }
+  }
 }

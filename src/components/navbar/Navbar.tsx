@@ -47,7 +47,7 @@ function Navbar({ Link, clickHome, pathname, hasClickedHome }: navBarProps) {
               }`}
             />
           </div>
-          <li className="nav-row">
+          <li className="nav-row" key={1}>
             <Link
               to="/"
               onClick={() => clickHome && clickHome()}
@@ -74,7 +74,7 @@ function Navbar({ Link, clickHome, pathname, hasClickedHome }: navBarProps) {
               }`}
             />
           </div>
-          <li className="nav-row">
+          <li className="nav-row" key={2}>
             <Link
               to="/about"
               onMouseEnter={() => hoveringCallback(pages.about)}
@@ -101,7 +101,7 @@ function Navbar({ Link, clickHome, pathname, hasClickedHome }: navBarProps) {
               }`}
             />
           </div>
-          <li className="nav-row">
+          <li className="nav-row" key={3}>
             <Link
               to="/travel"
               onMouseEnter={() => hoveringCallback(pages.travel)}
@@ -128,7 +128,7 @@ function Navbar({ Link, clickHome, pathname, hasClickedHome }: navBarProps) {
               }`}
             />
           </div>
-          <li className="nav-row">
+          <li className="nav-row" key={4}>
             <Link
               to="/books"
               onMouseEnter={() => hoveringCallback(pages.books)}
@@ -155,7 +155,7 @@ function Navbar({ Link, clickHome, pathname, hasClickedHome }: navBarProps) {
               }`}
             />
           </div>
-          <li className="nav-row">
+          <li className="nav-row" key={5}>
             <Link
               to="/contact"
               onMouseEnter={() => hoveringCallback(pages.contact)}
