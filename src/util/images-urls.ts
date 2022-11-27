@@ -1,5 +1,6 @@
 export enum HomeImages {
   vanPic = 'https://jakeraw-images.s3.us-east-2.amazonaws.com/me+in+a+van.jpeg',
+  croppedVanPic = 'https://jakeraw-images.s3.us-east-2.amazonaws.com/cropped_van.png',
 }
 
 export enum AboutImages {

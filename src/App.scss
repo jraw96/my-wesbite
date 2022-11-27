@@ -23,47 +23,41 @@ p {
 
 
 .app-container {
-    /*
-    margin: 16px 0px 16px 0px;
-    padding: 0px;
-    width: 100%;
-    */
-
     display: grid;
 
     // Colums: navbar, divider, content
     // grid-template-columns: 250px, 65px, auto;
     //grid-template-columns: 250px, 65px, auto;
 
-    // Make 2 rows, with the fixed row having a fixed heaight of 325, and the second row auto. 
-    grid-template-rows: 325px auto;
-    grid-template-rows: auto auto;
+    // Make 3 rows, with the fixed row having a fixed heaight of 396, and the second row auto. 
+    //grid-template-rows: 325px auto;
+    grid-template-rows: 386px auto auto;
     grid-template-areas: 
-        "nav divider top top top top top top top top"
+        "nav nav top top top top top top top top"
+        "divider divider divider divider divider divider divider divider divider divider"
         "page page page page page page page page page page"
     ;
 
     .nav-container {
         grid-area: nav;
-      //  max-width: 325px;
     }
 
     .divider-container {
         grid-area: divider;
+        min-height: 65px;
+        border-top: 2px solid var(--fill-color);
+        border-bottom: 2px solid var(--fill-color);
     }
 
     .top-container {
         grid-area: top;
+        align-self: start;
+        min-height: 386px;
     }
 
     .page-container {
-
         grid-area: page;
-
-        /*
-        display: flex;
-        flex-direction: row;
-        */
+        padding: 27px;
 
         .column-container {
             display: flex;

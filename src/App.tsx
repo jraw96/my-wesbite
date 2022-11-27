@@ -58,21 +58,16 @@ function App() {
           hasClickedHome={hasClickedHome}
         />
       </div>
-      <div className="divider-container">
-        divider
-        <div
-          className={`column-container ${showColumnThing ? 'show-column' : ''}`}
-        ></div>
-        <div
-          className={`routes-container ${pathname?.substring(1)}-positioning`}
-        ></div>
-      </div>
-      <div className="top-container"></div>
-
-      <div className="page-container">
+      <div className="top-container">
         <Routes>
           <Route path={pages.home} element={<Home show={hasClickedHome} />} />
           <Route path={pages.about} element={<About />} />
+          <Route path={pages.contact} element={<Contact />} />
+        </Routes>
+      </div>
+      <div className="divider-container"></div>
+      <div className="page-container">
+        <Routes>
           <Route
             path={pages.travel}
             element={<Travel thumbnails={travelRoutes} />}
@@ -83,7 +78,6 @@ function App() {
             return <Route path={pathname} element={getAlbum(obj)} />;
           })}
           <Route path={pages.books} element={<Books />} />
-          <Route path={pages.contact} element={<Contact />} />
         </Routes>
       </div>
     </div>

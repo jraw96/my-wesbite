@@ -8,12 +8,21 @@ export interface imageProps {
   title?: string;
   link?: string;
   onHover?: boolean;
+  borderRadius?: string;
 }
 
 /**
  * App wide image component
  */
-function ImageRender({ src, alt, width, title, onHover, link }: imageProps) {
+function ImageRender({
+  src,
+  alt,
+  width,
+  title,
+  onHover,
+  link,
+  borderRadius,
+}: imageProps) {
   const [imgSrc, setImgSrc] = useState<any>(undefined);
   const [hovering, setHovering] = useState(false);
   const [shown, show] = useState(false);
@@ -31,6 +40,7 @@ function ImageRender({ src, alt, width, title, onHover, link }: imageProps) {
     <div className="img-container" style={{ width: `${width}px` }}>
       {imgSrc ? (
         <div
+          className="hover-events"
           onMouseEnter={() => {
             setHovering(true);
             show(true);
@@ -47,17 +57,13 @@ function ImageRender({ src, alt, width, title, onHover, link }: imageProps) {
             src={imgSrc}
             alt={alt}
             width={width}
+            style={{ borderRadius: borderRadius }}
           />
-          {title && shown && (
-            <p className={`title-text ${hovering ? 'block-text-hover' : ''}`}>
-              {title}
-            </p>
-          )}
         </div>
       ) : (
         <div
           className="loadingio-spinner-spin-xcd3odh6wnd"
-          style={{ position: 'relative', top: `${width / 2 - 40}px` }}
+          style={{ position: 'relative', top: `${width / 2 - 100}px` }}
         >
           <div className="ldio-kuwptfm2w3">
             <div>

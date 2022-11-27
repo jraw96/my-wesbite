@@ -11,9 +11,6 @@ interface travelProps {
 function Travel({ thumbnails }: travelProps) {
   return (
     <div className="travel-container">
-      <div className="blurb-section">
-        <p className="text">Picture albums from my travels.</p>
-      </div>
       <div className="preview-section" id="2022">
         {thumbnails.map((obj: travelPageRouteObject) => (
           <Link to={`${pages.travel}${obj.path}`}>

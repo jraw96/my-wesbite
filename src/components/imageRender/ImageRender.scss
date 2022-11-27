@@ -1,11 +1,9 @@
 .img-specs {
-    border-radius: 100px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; 
     transition: transform .1s;
 }
 
 .img-container {
-    min-height: 400px;
     margin: 0 auto;
 
     .title-text {
@@ -18,7 +16,6 @@
     .image-hover {
       transform: scale(1.02);
       transition: transform .1s;
-      border-radius: 100px;
       cursor: pointer;
   
     }

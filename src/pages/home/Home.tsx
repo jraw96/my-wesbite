@@ -15,11 +15,12 @@ interface props {
 function Home({ show }: props) {
   // Van pic
   const imageProps1: imageProps = {
-    src: HomeImages.vanPic,
+    src: HomeImages.croppedVanPic,
     alt: 'Me leaning out of a van',
-    width: 416,
+    width: 310,
     title: 'Driving to the Guadeloupe Mountains TX, USA - 2021',
     link: `${window.location.origin}${pages.travel}${TravelPageRoutes.westTexas}`,
+    borderRadius: '10px',
   };
 
   // Vietnam buncha pic
@@ -33,7 +34,7 @@ function Home({ show }: props) {
 
   return (
     <>
-      {show && (
+      {
         <div className="home-container">
           <div className="col">
             <div className="image-container">
@@ -53,12 +54,9 @@ function Home({ show }: props) {
               <p className="text"> Cheers, </p>
               <p className="text">-Jake </p>
             </div>
-            <div className="image-container">
-              <ImageRender {...imageProps3} />
-            </div>
           </div>
         </div>
-      )}
+      }
     </>
   );
 }

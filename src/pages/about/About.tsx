@@ -11,9 +11,9 @@ function About() {
   const imageProps1: imageProps = {
     src: AboutImages.meAtYosemite,
     alt: 'Jake at Tunnel View, Yosemite',
-    width: 400,
-    title: 'At Tunnel View in Yosemite Park, CA, USA - 2022',
+    width: 270,
     link: `${window.location.origin}${pages.travel}${TravelPageRoutes.roadTrip2022}`,
+    borderRadius: '10px',
   };
 
   return (

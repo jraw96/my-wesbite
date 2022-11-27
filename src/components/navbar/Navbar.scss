@@ -3,6 +3,74 @@
 @import url("https://fonts.googleapis.com/css?family=Raleway:400,400i,700"); // Navbar fonts
 
 
+
+.navigation-section {
+  display: flex;
+  flex-direction: row;
+
+  .menu {
+    display: flex;
+    min-width:300px;
+
+    .hr-container {
+      width: 100%;
+    
+    
+    
+      .hr-settings {
+        right: 100%; 
+        // transition: 0.5s; 
+      }
+    
+      .animate {
+        right: 0;
+      }
+    
+      .show-hr {
+        opacity: 1;
+      }
+    
+      .hide-hr {
+        opacity: 0;
+      }
+    
+    }
+    
+    .current-page {
+      color: var(--fill-color);
+    }
+    
+    .half-opacity {
+      opacity: 0.5;
+    }
+    
+    
+    
+    .nav-row {
+      display: flex;
+      flex-direction: row;
+    }
+    
+    .right-spacing {
+      //margin-right: var(--banner-text-right-alignment);
+    }
+    
+    .travel-spacing {
+      // margin-right: 199px;
+    }
+  }
+
+  .column-thing {
+    border-left: 2px solid var(--fill-color);
+    border-right: 2px solid var(--fill-color);
+    border-bottom: 2px solid var(--fill-color);
+    min-width: 65px;
+
+    // Me cheating to line up containers:
+    //transform: translateY(-8px);
+  }
+}
+
 ul {
   width: 100%;
   display: flex;
@@ -39,51 +107,4 @@ hr {
   border: 1px solid var(--fill-color);
 
   padding-right: 40px;
-}
-
-.hr-container {
-  width: 100%;
-
-
-
-  .hr-settings {
-    right: 100%; 
-    // transition: 0.5s; 
-  }
-
-  .animate {
-    right: 0;
-  }
-
-  .show-hr {
-    opacity: 1;
-  }
-
-  .hide-hr {
-    opacity: 0;
-  }
-
-}
-
-.current-page {
-  color: var(--fill-color);
-}
-
-.half-opacity {
-  opacity: 0.5;
-}
-
-
-
-.nav-row {
-  display: flex;
-  flex-direction: row;
-}
-
-.right-spacing {
-  //margin-right: var(--banner-text-right-alignment);
-}
-
-.travel-spacing {
-  margin-right: 199px;
 }

@@ -3,10 +3,13 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: start;
+    min-height: inherit;
 
     .image-container {
         display: flex;
         margin-right: 54px;
+        margin-top: auto;
+        margin-bottom: auto;
     }
 
     .col {
@@ -20,20 +23,21 @@
             flex-direction: column;
 
             background-color: rgba(255,255,255,0.5);
+
+            margin: auto 0;
     
     
-            border-radius: 100px;
+            border-radius: 10px;
             width: 368px;
-            height: 268px;
+            height: 158px;
             box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; 
             padding: 16px;
     
             text-align: left;
             margin-right: 54px;
-            margin-bottom: 24px;
     
             .first-sentence {
-                margin-top: 54px
+               // margin-top: 54px
             }
     
             .text {
